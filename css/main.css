@@ -1,0 +1,90 @@
+﻿@charset "utf-8";
+/* CSS Document 
+By Sunplace
+Creation date:2016/8/12
+Update date:2016/12/24
+*/
+@font-face {
+font-family: 'FontCol';
+src: url('../font.ttf');
+}
+
+body{background-color:#464646;
+	font-family:"FontCol";
+	color:#FFFFFF; 
+	margin:20px;}
+
+footer{color:#898989;
+	  margin-top:10px;}
+
+.pic{margin:0 auto;
+	border:#FFFFFF solid 1px;
+	width:150px; 
+	height:150px;}
+
+.content span{font-size:smaller;
+			  font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+			  color:#A8A8A8;
+			  }
+
+.copyr{-webkit-filter: grayscale(100%); 
+	  -moz-filter: grayscale(100%); 
+	  -ms-filter: grayscale(100%); 
+	  -o-filter: grayscale(100%); 
+	  filter: grayscale(100%); 
+	  filter: gray; border-radius:3px;
+      height:50px;}
+
+center{ font-size:larger; line-height:30px;}
+
+/*普通输入框*/
+input{font-family:"FontCol";outline:none;border:none;}
+
+textarea{resize:vertical;
+		padding-top:5px; 
+		padding-bottom:5px; 
+		padding-left:10px; 
+		padding-right:10px;
+		color:#000000;
+		line-height:2; 
+		font-size:20px; 
+		background-color:#FFFFFF;
+		width:90%;
+		border-radius:4px;
+		text-align:left;
+		outline:none;
+		border:none;}
+
+/*标题输入框*/
+.title-input{padding-top:10px;
+			padding-bottom:0px;
+			padding-left:20px;
+			padding-right:20px;
+			color:#FFFFFF;
+			line-height:2;
+			font-size:20px; 
+			border:none; 
+			border-bottom:#FFFFFF solid 2px;
+			background-color:transparent;
+			width:50%; 
+			font-family:"FontCol";
+			text-align:center;
+			outline:none;}
+
+/*密码输入框*/
+input[type=password]{width:90%;
+					padding:10px;
+					border-radius:4px;}
+
+/*按钮*/
+input[type=submit]{padding-top:10px;
+				  padding-bottom:10px;
+				  padding-left:20px; 
+				  padding-right:20px;
+				  background-color:#FFFFFF;
+				  color:#000000;
+				  line-height:30px; 
+				  font-size:20px;			 
+				  border-radius:4px; 
+				  cursor:pointer;}
+.icon{width:64px;height:64px;}
