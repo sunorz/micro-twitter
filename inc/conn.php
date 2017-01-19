@@ -1,5 +1,5 @@
-﻿<?php if (!session_id()) session_start();
-date_default_timezone_set('Asia/Shanghai'); 
+<?php if (!session_id()) session_start();
+date_default_timezone_set('Asia/Shanghai'); //set timezone
 $con = mysql_connect("localhost","","");//连接数据库服务器
 if (!$con)
   {
