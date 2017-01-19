@@ -33,7 +33,8 @@ if(file_exists(date("ym").'.html')){
 		{
 		$poster='<center><input class="title-input" type="text" name="postcon"  required="required"   maxlength="'.(date("y")-15).'" placeholder="标头"></input></center><div style="height:20px;"></div>
 <center><input type="submit" value="标"></center>';
-		}
+//**maxlength="'.(date("y")-15).'"**表示2016年的标题最长1个汉字，之后每年加一个汉字，可删除}
+//if non-Chinese,delete **maxlength="'.(date("y")-15).'"**
 ?>
 <title>发布</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
