@@ -19,11 +19,15 @@ config **inc/con.php** to link database
 
 `data table name`**login**
 
-How to play music on post?
+###How to play music on post?
 
 1.upload your music(**mp3 only**) to    http://*yourdomain*/*postdate,170101*.mp3
 
 2.config **post.php** to display where you post music link and it'll play it.
+
+exp.If today is Jan. 19th,2017.Rename your audio name to `170119` make sure it's `mp3`.Upload it to 
+
+###
 
 any question plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
 
