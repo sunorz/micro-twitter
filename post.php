@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -33,8 +33,9 @@ if(file_exists(date("ym").'.html')){
 		{
 		$poster='<center><input class="title-input" type="text" name="postcon"  required="required"   maxlength="'.(date("y")-15).'" placeholder="标头"></input></center><div style="height:20px;"></div>
 <center><input type="submit" value="标"></center>';
-//**maxlength="'.(date("y")-15).'"**表示2016年的标题最长1个汉字，之后每年加一个汉字，可删除}
+//**maxlength="'.(date("y")-15).'"**表示2016年的标题最长1个汉字，之后每年加一个汉字，可删除
 //if non-Chinese,delete **maxlength="'.(date("y")-15).'"**
+			}
 ?>
 <title>发布</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -64,6 +65,7 @@ if($_SERVER['REQUEST_METHOD']="POST")
 		if($cont!="")
 		{	
 //判断日期
+			//Seasons' Color :)
 	$color='E4F8F5';
 	$month=(int)date("n");
 	switch($month)
@@ -85,7 +87,7 @@ if(file_exists(date("ym").'.html'))
 		$complete=$front.'<div class="content" onClick="plays('.date("ymd").')" style="padding-bottom:5px !important; cursor:pointer;">'.$cont.'<div style=" width:100%; text-align:right;"><span>'.date("y/n/j").'</span></div>
 <div id="pastime'.date("ymd").'" style="height:2px; width:0; background-color:#'.$color2.'"></div>
 </div>
-<audio id="music'.date("ymd").'"  src="http://yourdomain/'.date("ymd").'.mp3"></audio>'.$after;
+<audio id="music'.date("ymd").'"  src="http://yourdomainname/'.date("ymd").'.mp3"></audio>'.$after;
 	}
 	else
 	{
