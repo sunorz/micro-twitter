@@ -24,6 +24,8 @@ micro-twitter
 
 3.config the countdown in **index.html** if you want.
 
+4.config **TimeZone** in **inc/conn.php**.
+
 \# Before your first post at month you will type a title in this month page.
 
 ###How to play music on post?
@@ -67,5 +69,7 @@ my website:[卡库伊2.0](http://www.jsunplace.com).
 3.首页有个Jquery倒计时，可以删除或修改，默认秒。
 
 4.引用音频地址在**post.php**里配置。
+
+5.按季节变换颜色，在**post.php**里配置。
 
 ![sunplace](http://www.jsunplace.com/copyright_by_sunplace.png)
