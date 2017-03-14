@@ -33,9 +33,9 @@ if(file_exists(date("ym").'.html')){
 		{
 		$poster='<center><input class="title-input" type="text" name="postcon"  required="required"   maxlength="'.(date("y")-15).'" placeholder="标头"></input></center><div style="height:20px;"></div>
 <center><input type="submit" value="标"></center>';
-//**maxlength="'.(date("y")-15).'"**表示2016年的标题最长1个汉字，之后每年加一个汉字，可删除
+//**maxlength="'.(date("y")-15).'"**表示今年的标题长度为2个汉字，之后每年加1个汉字，可删除
 //if non-Chinese,delete **maxlength="'.(date("y")-15).'"**
-			}
+		}
 ?>
 <title>发布</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -65,7 +65,7 @@ if($_SERVER['REQUEST_METHOD']="POST")
 		if($cont!="")
 		{	
 //判断日期
-			//Seasons' Color :)
+//Seasons' Color :)
 	$color='E4F8F5';
 	$month=(int)date("n");
 	switch($month)
@@ -87,7 +87,7 @@ if(file_exists(date("ym").'.html'))
 		$complete=$front.'<div class="content" onClick="plays('.date("ymd").')" style="padding-bottom:5px !important; cursor:pointer;">'.$cont.'<div style=" width:100%; text-align:right;"><span>'.date("y/n/j").'</span></div>
 <div id="pastime'.date("ymd").'" style="height:2px; width:0; background-color:#'.$color2.'"></div>
 </div>
-<audio id="music'.date("ymd").'"  src="http://yourdomainname/'.date("ymd").'.mp3"></audio>'.$after;
+<audio id="music'.date("ymd").'"  src="[yourdomain]'.date("ymd").'.mp3"></audio>'.$after;
 	}
 	else
 	{
@@ -152,22 +152,13 @@ echo "<script>window.location.href='post.php';</script>";
 
 function countnum()
 {
-$filename ='index.html';	
+$filename='js/count.js';
 $file_content = file_get_contents($filename);
-$start=strrpos($file_content,'<span>')+6;
-$end=strrpos($file_content,'</span>');
-$len=$end-$start;
-$center=substr($file_content,strrpos($file_content,'<span>')+6,$len);
-$center++;
-$center=number_format($center);
-$front=substr($file_content,0,strrpos($file_content,'<span>')+6);
-$after=substr($file_content,strrpos($file_content,'</span>')+7);
-
-		$handle = fopen($filename, 'w');//打开文件
-
-$complete=$front.$center.'</span>'.$after;
-
-		fwrite($handle, $complete);
+$older=preg_match('/\d+/',$file_content,$arr);
+$new=$arr[0]+1;
+$handle = fopen($filename, 'w');//打开文件
+$complete="document.write('".$new."');";
+fwrite($handle, $complete);
 }
 ?>
 
