@@ -1,7 +1,7 @@
 micro-twitter
 =================
-##English
-###Config
+## English
+### Config
 1.config **inc/con.php** to link database
 
 `Database field`
@@ -28,7 +28,7 @@ micro-twitter
 
 \# Before your first post at month you will type a title in this month page.
 
-###How to play music on post?
+### How to play music on post?
 
 1.upload your music(**mp3 only**) to    http://*yourdomain*/*postdate,170101*.mp3
 
@@ -39,11 +39,11 @@ Like `http://abc.com/mymusic`.Then post star with word 'Music'.
 
 
 
-any question plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
+any questions plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
 
-my website:[卡库伊2.0](http://www.jsunplace.com).
+my blog:[卡库伊2.0](http://www.jsunplace.com).
 
-##中文
+## 中文
 
 1.配置**inc/con.php**来链接你的数据库。
 
@@ -62,7 +62,7 @@ my website:[卡库伊2.0](http://www.jsunplace.com).
     </table>
 </div>
 
-\#如果要修改字段名和表名，需连同**inc/chgpwd.php**、**inc/functions.php**。
+#如果要修改字段名和表名，需连同**inc/chgpwd.php**、**inc/functions.php**。
 
 2.每个月发帖之前要上传一张150px\*150px的GIF图片到**gallery**。
 
