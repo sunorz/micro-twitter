@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<title>正门</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){ 
+    show_time();
+});
+function show_time(){ 
+var starstamp=new Date().getTime();
+var endstamp=new Date('2031-9-1 00:00:00.000').getTime();
+var time_distance = endstamp - starstamp; 
+time_distance=Math.floor(time_distance/1000);
+$("#time_d").html(time_distance); 
+setTimeout("show_time()",1000); 
+}
+</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+<symbol id="icon-bin" viewBox="0 0 299.344 299.344">
+<polygon points="97.66,129.735 76.891,118.129 82.166,165.135 100.484,154.9  " fill="#FFFFFF"/>
+	<polygon points="239.139,169.751 239.139,116.462 219.795,127.271 219.795,158.942  " fill="#FFFFFF"/>
+	<path d="M239.139,240.246v-31.448l-7.41-4.142l-11.934-6.669v39.531c-12.783,2.308-22.875,12.431-25.135,25.23h-82.072   l-7.98-71.107l-18.317,10.236l9.003,80.215h102.174c5.121,10.218,15.689,17.252,27.874,17.252c17.185,0,31.165-13.98,31.165-31.164   C256.506,255.947,249.419,245.345,239.139,240.246z M225.341,280c-6.517,0-11.82-5.303-11.82-11.82   c0-6.518,5.303-11.821,11.82-11.821c6.519,0,11.821,5.303,11.821,11.821C237.163,274.697,231.86,280,225.341,280z" fill="#FFFFFF"/>
+	<path d="M81.317,81.557l11.667,6.52l-4.016-35.78h130.827v35.929l11.934-6.669l7.41-4.141v-7.615   c7.927-3.582,13.446-11.552,13.446-20.815c0-9.264-5.52-17.233-13.446-20.815V0H68.987c-14.419,0-26.15,11.731-26.15,26.15   c0,14.418,11.731,26.148,26.15,26.148h0.516l2.713,24.173L81.317,81.557z M68.987,32.954c-3.753,0-6.806-3.052-6.806-6.804   c0-3.753,3.053-6.806,6.806-6.806h150.809v13.61H68.987z" fill="#FFFFFF"/>
+	<polygon points="236.841,195.508 243.243,184.049 169.972,143.107 243.243,102.163 236.841,90.706 156.523,135.591 76.205,90.706    69.803,102.163 143.073,143.107 69.803,184.049 76.205,195.508 156.523,150.623  " fill="#FFFFFF"/>
+</symbol>	
+</svg>
+<center><svg viewBox="0 0 299.344 299.344" class="icon">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-bin"></use>
+</svg></center>
+<!--自己找方法进来-->
+<center>Total:&nbsp;<script src="js/count.js"
+></script>&nbsp;packets</center>
+<center><p id="time_d"></p></center>
+<div style="height:100px;"></div>
+<center><img class="copyr" src="copyright_by_sunplace.png" alt="cover"></center>
+</body>
+</html>
