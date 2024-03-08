@@ -41,7 +41,7 @@ Like `http://abc.com/mymusic`.Then post star with word 'Music'.
 
 any questions plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
 
-my blog:[卡库伊2.0](http://www.jsunplace.com).
+my blog:[卡库伊2.0](https://blog.kkii.org).
 
 ## 中文
 
@@ -71,5 +71,3 @@ my blog:[卡库伊2.0](http://www.jsunplace.com).
 4.引用音频地址在**post.php**里配置。
 
 5.按季节变换颜色，在**post.php**里配置。
-
-![sunplace](http://www.jsunplace.com/copyright_by_sunplace.png)
