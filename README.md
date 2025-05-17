@@ -1,73 +1,57 @@
 micro-twitter
 =================
 ## English
-### Config
-1.config **inc/con.php** to link database
 
-`Database field`
-<div>
-    <table border="0">
-      <tr>
-        <th>fieldname</th>
-        <th>type</th>
-      </tr>
-      <tr>
-        <td>passwd</td>
-        <td>varchar(50)</td>
-      </tr>
-    </table>
-</div>
+1. **post.php** is a backend posting interface that supports text, image, and video content types
 
-`data table name`**login**
+2. Private posts and NSFW content are not supported for backend publishing
 
-2.upload a picture per month to **gallery**.Size(150px\*150px,GIF)
+3. The backend does not support image or video uploads
 
-3.config the countdown in **index.html** if you want.
+4. Use nginx configuration to protect files under /private-post with HTTP Basic Authentication
 
-4.config **TimeZone** in **inc/conn.php**.
+5. Copyright records for private images are stored in /private-post/images and can be automatically identified
 
-\# Before your first post at month you will type a title in this month page.
+6. No database required, but PHP support is needed. If backend posting isn't required, you may delete post.php and switch to static-only
 
-### How to play music on post?
+### Media Storage Guide
 
-1.upload your music(**mp3 only**) to    http://*yourdomain*/*postdate,170101*.mp3
+| Path | Example |
+| :---- | :---- |
+|*images/post/*| 250517-1.webp |
+|*videos/post/*| 250517-1.mp4 |
+|*private-post/images/*| 250517-1.webp |
+|*private-post/images/*| 250517-1\.md |
+|*private-post/videos/*| 250517-1.mp4 |
 
-2.config **post.php** to display where you post music link and it'll play it with tag `audio`.
+Your comments in this repo's discussions will show up in my micro-twitter feed :)
 
-exp.If today is Jan. 19th,2017.Rename your audio name to `170119` make sure it's `mp3`.Upload it to cloud where you want to store.
-Like `http://abc.com/mymusic`.Then post star with word 'Music'.
-
-
-
-any questions plz send to [sunplace@live.cn](mailto:sunplace@live.cn).
-
-my blog:[卡库伊2.0](https://blog.kkii.org).
+My blog: [卡库伊2.0](https://blog.kkii.org).
 
 ## 中文
 
-1.配置**inc/con.php**来链接你的数据库。
+1. **post.php** 是一个后台发布界面，支持文字、图片、视频三种类型
 
-建立数据库，表**login**
+2. 私密帖子和nsfw的帖子不支持后台发表
 
-<div>
-    <table border="0">
-      <tr>
-        <th>字段名称</th>
-        <th>类型</th>
-      </tr>
-      <tr>
-        <td>passwd</td>
-        <td>varchar(50)</td>
-      </tr>
-    </table>
-</div>
+3. 后台不支持图片和视频上传
 
-#如果要修改字段名和表名，需连同**inc/chgpwd.php**、**inc/functions.php**。
+4. 请使用 nginx 配置保护/private-post下的文件，如HTTP Basic验证
 
-2.每个月发帖之前要上传一张150px\*150px的GIF图片到**gallery**。
+5. 私密图片的版权记录在/private-post/images下，可以自动识别
 
-3.首页有个Jquery倒计时，可以删除或修改，默认秒。
+6. 不需要数据库，但需要PHP支持，如果不需要后台发布，可以删除 **post.php** ，改为纯静态
 
-4.引用音频地址在**post.php**里配置。
+### 媒体存放说明
 
-5.按季节变换颜色，在**post.php**里配置。
+| 路径 | 例子 |
+| :---- | :---- |
+|*images/post/*| 250517-1.webp |
+|*videos/post/*| 250517-1.mp4 |
+|*private-post/images/*| 250517-1.webp |
+|*private-post/images/*| 250517-1\.md |
+|*private-post/videos/*| 250517-1.mp4 |
+
+你在该仓库discussions的留言会显示在我的 micro-twitter 里 :)
+
+我的博客:[卡库伊2.0](https://blog.kkii.org)。
