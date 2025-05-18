@@ -495,7 +495,7 @@ unset($_SESSION['error'], $_SESSION['success']);
         
         <!-- 底部信息 -->
         <div class="qq-footer">
-            &copy; 高级不可回收物 , <script>const date = new Date();
+            &copy; Untitled , <script>const date = new Date();
             document.write(date.getFullYear());</script>
         </div>
     </div>

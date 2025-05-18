@@ -296,6 +296,50 @@ const total = 46868;
                 height: 200px;
             }
         }
+         .player {
+      width: 150px;
+      height: 150px;
+      background: var(--md-surface);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .bars {
+      display: none; /* 默认隐藏 */
+      justify-content: space-between;
+      align-items: center;
+      width: 32px;
+      height: 100px;
+    }
+
+.bar {
+  width: 3px; /* 加粗 */
+  height: 16px;
+  border-radius: 6px; /* 圆角更大，视觉更柔和 */
+  transition: height 0.4s ease; /* 平滑过渡高度变化 */
+  background: linear-gradient(135deg, var(--md-green), var(--md-yellow));
+}
+.play-icon {
+  position: absolute;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-icon svg {
+  transition: opacity 0.3s ease;
+    width: 32px;
+  height: 32px;
+}
+.playsvg{
+    fill:var(--md-on-surface);
+}
     </style>    
 </head>
 <body>
@@ -321,6 +365,42 @@ const total = 46868;
     </div>
     <div class="all">
     <!-- INSERT_HERE -->
+   <div class="tweet">                    
+    <div class="tweet-content">
+        <div class="tweet-header">                            
+            <span class="time">2025/05/18 07:22:29</span>
+            <span class="more-options">...</span>
+        </div>
+        <div class="tweet-text">
+            Text.
+        </div>
+        <div class="media-container" style="max-width:150px;">
+            <div id="p1" class="player">
+     <div class="play-icon">
+  <svg viewBox="0 0 100 100" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+  <path class="playsvg"
+    d="
+      M 20 15
+      Q 20 10 25 13
+      L 85 48
+      Q 90 50 85 52
+      L 25 87
+      Q 20 90 20 85
+      Z
+    "
+  />
+</svg>
+
+</div>
+    <div class="bars">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </div>
+    <audio id="audio1" src="/audio/250518-1.mp3"></audio>
+  </div>
+            <div class="media-c" style="text-align:left;border-top:var(--md-outline) 1px solid;">Artist : 陈雪凝<br/>Song : 没有人心疼我<br/>Album : 没有人心疼我</div>
+        </div>
+    </div>
+</div>
     <!-- nsfw images tweet Background publishing is not supported -->
     <div class="tweet">        
         <div class="tweet-content">
@@ -801,6 +881,78 @@ const total = 46868;
             lazyImages.forEach(image => {
                 observer.observe(image);
             });
+             let currentPlayer = null;
+let currentAudio = null;
+let animationId = null;
+
+function stopAnimation() {
+  if (animationId) {
+    clearTimeout(animationId);
+    animationId = null;
+  }
+
+  if (currentPlayer) {
+    const barsContainer = currentPlayer.querySelector('.bars');
+    const playIcon = currentPlayer.querySelector('.play-icon');
+    barsContainer.style.display = 'none';
+    playIcon.style.display = 'block';
+
+    const bars = barsContainer.querySelectorAll('.bar');
+    bars.forEach(bar => bar.style.height = '30px');
+
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    currentPlayer = null;
+    currentAudio = null;
+  }
+}
+
+function startRandomAnimation(barsContainer, bars, playIcon) {
+  barsContainer.style.display = 'flex';
+  playIcon.style.display = 'none';
+
+  function animate() {
+    bars.forEach(bar => {
+      const height = Math.floor(Math.random() * 20) + 5;
+      bar.style.height = `${height}px`;
+    });
+
+    animationId = setTimeout(animate, 400); // 平滑动画
+  }
+
+  animate();
+}
+
+document.querySelectorAll('.player').forEach(player => {
+  const barsContainer = player.querySelector('.bars');
+  const bars = barsContainer.querySelectorAll('.bar');
+  const audio = player.querySelector('audio');
+  const playIcon = player.querySelector('.play-icon');
+
+  player.addEventListener('click', () => {
+    const isCurrent = currentPlayer === player;
+
+    if (isCurrent) {
+      stopAnimation();
+    } else {
+      stopAnimation();
+      currentPlayer = player;
+      currentAudio = audio;
+
+      audio.currentTime = 0;
+      audio.play();
+
+      startRandomAnimation(barsContainer, bars, playIcon);
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    stopAnimation();
+  });
+});
         </script>
     </div>
 </body>

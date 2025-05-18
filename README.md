@@ -1,5 +1,6 @@
 micro-twitter
 =================
+![preview](preview.webp)
 ## English
 
 1. **post.php** is a backend posting interface that supports text, image, and video content types
