@@ -23,7 +23,6 @@ micro-twitter
 |*videos/post/*| 250517-1.mp4 |
 |*private-post/images/*| 250517-1.webp |
 |*private-post/images/*| 250517-1\.md |
-|*private-post/videos/*| 250517-1.mp4 |
 
 Your comments in this repo's discussions will show up in my micro-twitter feed :)
 
