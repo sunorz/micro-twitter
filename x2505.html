@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
-        <meta charset="UTF-8"><meta name="google" content="notranslate">
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>untitled</title>
-<script>
-const total = 42530;
-const past_data = 83621;
-    </script>
+        <title>2025年5月 - Untitled</title>
         <style>
         /* 基础样式 */
         body {
@@ -110,28 +107,6 @@ const past_data = 83621;
             align-items: center;
             margin-bottom: 4px;
         }
-        
-        .display-name {
-            font-weight: bolder;
-            margin-right: 4px;
-            color: var(--md-on-background);
-        }
-        
-        .username, .time, .dot {
-            color: var(--md-on-surface-variant);
-            margin-right: 4px;
-            font-size: 14px;
-        }
-        
-        .bsvg {
-            width: 18px;
-            transform: translateY(2px);
-            margin-right: 3px;
-        }
-        .bsvg-path{
-            fill: var(--md-on-surface);
-        }
-        
         .more-options {
             margin-left: auto;
             color: var(--md-on-surface-variant);
@@ -148,7 +123,7 @@ const past_data = 83621;
         }
         
         a {
-            color: rgb(29, 155, 240);
+            color: #7d6d0c;
             text-decoration: none;
         }
         
@@ -213,17 +188,9 @@ line-height: 1.7;
             border-bottom: 1px solid var(--md-outline);
         }
         
-        .top-banner, .bottom-banner {
+        .bottom-banner {
             background: url(images/profile.jpg) no-repeat;
             background-size: cover;
-        }
-        
-        .top-banner {
-            height: 500px;
-            background-position: top center;
-        }
-        
-        .bottom-banner {
             height: 33px;
             background-position: bottom center;
             padding-left: 1rem;
@@ -265,24 +232,20 @@ line-height: 1.7;
         }
         
         .twi-comment { display: none; }
-        
-        .verified-badge {
-            width: 1.4rem;
-            margin-left: 0.2rem;
-            transform: translateY(4px);
-        }
-        
+  
         .twi-tabs {
             font-weight: bolder;
             cursor: pointer;
             display: inline-block;
         }
         
-        .twi-tabs-text {
+        .twi-tabs-text , .twi-tabs-text a {
             color: var(--md-on-surface-variant);
             padding: 1rem;
         }
-        
+        .twi-tabs-text a:hover{
+            text-decoration: none;
+        }
         .twi-tabs-bottom {
             height: 5px;
             width: 100%;
@@ -336,7 +299,7 @@ line-height: 1.7;
   height: 16px;
   border-radius: 6px; /* 圆角更大，视觉更柔和 */
   transition: height 0.4s ease; /* 平滑过渡高度变化 */
-  background: linear-gradient(135deg, var(--md-green), var(--md-yellow));
+  background: linear-gradient(135deg, #7d6d0c, #1f1f1f);
 }
 .play-icon {
   position: absolute;
@@ -355,6 +318,76 @@ line-height: 1.7;
 .playsvg{
     fill:var(--md-on-surface);
 }
+.header a{
+            font-size: 20px;
+            color: var(--md-on-background);
+        }
+.footer a{
+    color: rgb(29, 155, 240);
+}
+        img , video {
+   filter: 
+    grayscale(100%)    /* 完全黑白 */
+    sepia(80%)         /* 添加褐色调 */
+    brightness(90%)    /* 微调亮度 */
+    contrast(90%);     /* 微调对比度 */
+
+  /* 兼容旧版 WebKit 浏览器 */
+  -webkit-filter: 
+    grayscale(100%)
+    sepia(80%)
+    brightness(90%)
+    contrast(90%);
+}
+
+.music-info {
+      overflow: hidden;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--md-on-surface-variant);
+            font-size: 12px;
+            padding: 6px;
+            border-top:var(--md-outline) 1px solid;
+    }
+
+    .info-line {
+      white-space: nowrap;
+      position: relative;
+      margin-bottom: 5px;
+      overflow: hidden;
+    }
+
+    .static-part {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      background: var(--md-surface);
+      padding-right: 5px;
+    }
+
+    .scroll-wrapper {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      vertical-align: top;
+      padding-right: 10px; /* 视觉留白 */
+    }
+
+    .scroll-part {
+      display: inline-block;
+      position: relative;
+      left: 0;
+      transition: left 0.5s linear;
+      margin-right: 10px; /* 补偿 padding-right */
+    }
+
+    .scroll-part.no-transition {
+      transition: none !important;
+    }
+
+    .scroll-part.paused {
+      transition: none;
+    }
     .trans {
     display: none;
 }
@@ -362,8 +395,8 @@ line-height: 1.7;
 .trans-button {
     display: block;
     margin-bottom: 6px;
-    font-size: 13px;
 }
+
 .trans-button:hover {
     text-decoration: none;
 }
@@ -373,7 +406,7 @@ line-height: 1.7;
     </style>
     </head>
     <body>
-        <div class="header"><svg t="1746847106578" viewBox="0 0 1024 1024"
+        <div class="header"><a href="/index.html"><svg t="1746847106578" viewBox="0 0 1024 1024"
                 version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1568"
                 width="32" height="32"><path class="icon" d="M446.31
                     135.36c59.14-32.57 133.57-17.46 177.33 32.42 20.22 23.05
@@ -402,218 +435,41 @@ line-height: 1.7;
                     9.16 32.06 1.28 64.27-0.59 96.39-1.8 11.18-0.42 17.17 2.18
                     17.13 14.68-0.23 77.57-0.12 155.15-0.12 232.72-2.16
                     0.66-4.31 1.33-6.47 2z" fill="#ffffff" p-id="1569"></path></svg><span
-                style="display:inline-block;transform: translate(5px,-8px);">Untitled</span></div>
-        <div class="top-banner"></div>
-        <div style="padding:16px;background-color:var(--md-background);position:
+                style="display:inline-block;transform: translate(5px,-8px);">Untitled</span></a></div>
+                 <div style="padding:16px;background-color:var(--md-background);position:
             relative;">
-            <div style="width: 64px;height: 64px;border-radius: 50%;background:
-                url(images/avatar.gif);
-                background-size: cover;border:var(--md-background) solid
-                3px;position: absolute;top:-35px;"></div>
             <div>
-                <p>&nbsp;</p>
-                <p style="font-weight: bolder;font-size:110%;">Nickname<img
-                        class="verified-badge" src="images/verified_badge.svg"></p>
-                <p style="color:var(--md-on-surface);">@account_name</p>
-                <p style="font-weight: bolder;">Signature of the individual.</p>
-                <p style="color:var(--md-on-surface);"><svg class="bsvg"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                        aria-hidden="true"><g><path class="bsvg-path" d="M12
-                                7c-1.93 0-3.5 1.57-3.5 3.5S10.07 14 12
-                                14s3.5-1.57 3.5-3.5S13.93 7 12 7zm0 5c-.827
-                                0-1.5-.673-1.5-1.5S11.173 9 12 9s1.5.673 1.5
-                                1.5S12.827 12 12 12zm0-10c-4.687 0-8.5 3.813-8.5
-                                8.5 0 5.967 7.621 11.116 7.945
-                                11.332l.555.37.555-.37c.324-.216 7.945-5.365
-                                7.945-11.332C20.5 5.813 16.687 2 12 2zm0
-                                17.77c-1.665-1.241-6.5-5.196-6.5-9.27C5.5 6.916
-                                8.416 4 12 4s6.5 2.916 6.5 6.5c0 4.073-4.835
-                                8.028-6.5 9.27z"></path></g></svg>Country</span>
-                <span style="margin-left:20px;"><svg class="bsvg"
-                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                        aria-hidden="true"><g><path class="bsvg-path" d="M7
-                                4V3h2v1h6V3h2v1h1.5C19.89 4 21 5.12 21 6.5v12c0
-                                1.38-1.11 2.5-2.5 2.5h-13C4.12 21 3 19.88 3
-                                18.5v-12C3 5.12 4.12 4 5.5 4H7zm0 2H5.5c-.27
-                                0-.5.22-.5.5v12c0 .28.23.5.5.5h13c.28 0
-                                .5-.22.5-.5v-12c0-.28-.22-.5-.5-.5H17v1h-2V6H9v1H7V6zm0
-                                6h2v-2H7v2zm0 4h2v-2H7v2zm4-4h2v-2h-2v2zm0
-                                4h2v-2h-2v2zm4-4h2v-2h-2v2z"></path></g></svg>Joined
-                    May 2025</p>
-                <p><span style="font-weight: bolder;margin-right:5px;">0</span><span
-                        style="color:var(--md-on-surface);">Following</span><span
-                        style="font-weight: bolder;margin:0px 5px 0px 20px;"
-                        id="followers">...</span><span
-                        style="color:var(--md-on-surface);">Followers</span></p>
+                <p><span style="font-weight: bolder;margin-right:5px;" id="tposts">...</span><span
+                        style="color:var(--md-on-surface);">Posts</span><span style="font-weight: bolder;margin:0px 5px 0px 20px;" id="followers">...</span><span
+                        style="color:var(--md-on-surface);">Followers (MoM)</span></p>
             </div>
         </div>
         <div class="nav">
-            <div class="twi-tabs" style="margin-left:2rem;"><div
-                    class="twi-tabs-cur-text">Tweet</div><div
-                    class="twi-tabs-cur-bottom"></div></div>
-            <div class="twi-tabs"><div class="twi-tabs-text">Comment</div><div
-                    class="twi-tabs-bottom"></div></div>
-            <div class="twi-tabs"><div class="twi-tabs-text">Monthly</div><div
-                    class="twi-tabs-bottom"></div></div>
+            <div class="twi-tabs" style="margin-left:2rem;"><div class="twi-tabs-text twi-tabs-cur-text"><a href="/archive.html">May 2025</a></div><div
+                    class="twi-tabs-bottom twi-tabs-cur-bottom"></div></div>
         </div>
-        <div class="all">
+   
             <!-- INSERT_HERE -->
-<div class="tweet">                    
-        <div class="tweet-content">
-            <div class="tweet-header">                                
-                <span class="time">2025/06/02 03:38:44</span>
-                <span class="more-options">...</span>
-            </div>
-            <div class="tweet-text">
-               Text.
-            </div><a class="trans-button" href="javascript:void(0)">Translate</a><div class="tweet-text trans">Foreign languages</div>
-        </div>
-</div>                    </div>
-                    <div class="twi-comment">
-                        <div class="tweet">
-                            <!-- giscus comment -->
-    </script></div></div>
-                    <div class="bottom-banner"></div>
+            <div class="tweet">                    
+                <div class="tweet-content">
+                    <div class="tweet-header">                                
+                        <span class="time">2025/05/30 12:52:51</span>
+                        <span class="more-options">...</span>
+                    </div>
+                    <div class="tweet-text">
+                        Text.
+                    </div><a class="trans-button" href="javascript:void(0)">Translate</a><div class="tweet-text trans">Foreign languages</div>
+                </div>
+        </div>            
+                    <div class="bottom-banner">may2025</div>
                     <div class="footer">
                         &copy; Untitled ,
                         <script>
             const date = new Date();
             document.write(date.getFullYear());
             
-            function updateTimeElements() {
-                const timeElements = document.querySelectorAll('span.time');
-                const now = new Date();
-                
-                timeElements.forEach((element) => {
-                    const timeString = element.textContent.trim();
-                    const date = new Date(timeString.replace(/-/g, '/')); // 兼容 - 和 / 分隔符
-                    
-                    // 如果解析失败，直接跳过（保留原始时间文本）
-                    if (isNaN(date.getTime())) {
-                        return; // 终止当前元素的处理
-                    }
-                    
-                    const diffMs = now - date;
-                    const diffSec = Math.floor(diffMs / 1000);
-                    const diffMin = Math.floor(diffSec / 60);
-                    const diffHour = Math.floor(diffMin / 60);
-                    const diffDay = Math.floor(diffHour / 24);
-                    
-                    let displayTime;
-                    if (diffSec < 60) {
-                        displayTime = "Now";
-                    } else if (diffMin < 60) {
-                        displayTime = `${diffMin}m`;
-                    } else if (diffHour < 24) {
-                        displayTime = `${diffHour}h`;
-                    } else if (diffDay < 7) {
-                        displayTime = `${diffDay}d`;
-                    } else {
-                        // 超过 7 天，显示 YYYY/M/D 格式（如 2024/5/10）
-                        const year = date.getFullYear();
-                        const month = date.getMonth() + 1; // 月份从 0 开始
-                        const day = date.getDate();
-                        displayTime = `${year}/${month}/${day}`;
-                    }
-                    
-                    element.textContent = displayTime;
-                });
-            }
-            
-            // 页面加载时执行
-            document.addEventListener('DOMContentLoaded', updateTimeElements);
-         
-            // 可选：每分钟更新一次（保持时间动态变化）
-            setInterval(updateTimeElements, 60000);
-            
-            document.addEventListener('DOMContentLoaded', function () {
-                const tabs = document.querySelectorAll('.twi-tabs');
-                const allContent = document.querySelector('.all');
-                const commentContent = document.querySelector('.twi-comment');
-                const bottomBanner = document.querySelector('.bottom-banner');
-                const tweets = document.querySelectorAll('.all .tweet'); // 选择所有tweet元素
-                
-                // 初始状态显示第一个标签页内容并清空底部横幅
-                if (tabs.length > 0 && allContent) {
-                    if (bottomBanner) bottomBanner.innerHTML = 'tweet'; // 初始化底部横幅
-                    tabs[0].click(); // 触发第一个标签页的点击事件
-                }
-            
-                tabs.forEach((tab, index) => {
-                    tab.addEventListener('click', function() {
-                        // 移除所有标签页的当前选中状态
-                        tabs.forEach(t => {
-                            const textDiv = t.firstElementChild;
-                            const bottomDiv = t.lastElementChild;
-                            
-                            textDiv.className = 'twi-tabs-text';
-                            bottomDiv.className = 'twi-tabs-bottom';
-                        });
-                        
-                        // 设置当前点击的标签页为选中状态
-                        const currentTextDiv = this.firstElementChild;
-                        const currentBottomDiv = this.lastElementChild;
-                        
-                        currentTextDiv.className = 'twi-tabs-cur-text';
-                        currentBottomDiv.className = 'twi-tabs-cur-bottom';
-                        
-                        // 根据点击的标签页索引显示对应内容
-                        if (index === 0 && allContent) {
-                            // 第一个标签页：显示.all，但只显示前三条tweet
-                            allContent.style.display = 'block';
-                            if (bottomBanner) bottomBanner.innerText = 'tweet'; // 清空底部横幅
-                            if (commentContent) commentContent.style.display = 'none';
-                            
-                            // 显示前三条tweet，隐藏其余的
-                            if (tweets.length > 0) {
-                                tweets.forEach((tweet, i) => {
-                                    if (i < 3) {
-                                        tweet.style.display = 'block';
-                                    } else {
-                                        tweet.style.display = 'none';
-                                    }
-                                });
-                            }
-                        } else if (index === 1 && commentContent) {
-                            // 第二个标签页：显示.twi-comment，隐藏.all
-                            commentContent.style.display = 'block';
-                            if (bottomBanner) bottomBanner.innerText = 'comment'; // 设置底部横幅
-                            if (allContent) allContent.style.display = 'none';
-                        } else if (index === 2 && allContent) {
-                            // 第三个标签页：显示.all中的所有tweet
-                            allContent.style.display = 'block';
-                            if (bottomBanner) bottomBanner.innerText = 'monthly';
-                            if (commentContent) commentContent.style.display = 'none';
-                            
-                            // 显示所有tweet
-                            if (tweets.length > 0) {
-                                tweets.forEach(tweet => {
-                                    tweet.style.display = 'block';
-                                });
-                            }
-                        }
-                    });
- 
-                    
-                }); 
-            
-                function formatFollowers(total) {
-                    if (total < 1000) {
-                        return total;
-                    } else if (total < 1000000) {
-                        return `${(total / 1000).toFixed(1)}K`;
-                    } else if (total < 1000000000) {
-                        return `${(total / 1000000).toFixed(1)}M`;
-                    } else {
-                        return `${(total / 1000000000).toFixed(2)}B`;
-                    }
-                }
-                console.log(total-40073);
-                
-                const formatted = formatFollowers(total+past_data-40073);
-            
-                // 显示到指定的span元素中
-                document.getElementById('followers').textContent = formatted;
+            document.addEventListener('DOMContentLoaded', function () {               
+              
             
                 const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif'];
                 const videoExtensions = ['mp4', 'mov', 'webm'];
@@ -813,8 +669,7 @@ line-height: 1.7;
                         }
                     });
                 });
-
-    const buttons = document.querySelectorAll('.trans-button');
+                   const buttons = document.querySelectorAll('.trans-button');
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -833,11 +688,20 @@ line-height: 1.7;
             button.style.display = 'none';
         });
     });
+// 统计class为tweet的元素数量
+const tweetCount = document.querySelectorAll('.tweet').length;
 
+// 将结果显示在id为tposts的元素中
+const tpostsElement = document.getElementById('tposts');
+if (tpostsElement) {
+    tpostsElement.textContent = tweetCount.toString();
+} else {
+    console.error('未找到id为tposts的元素');
+}
 
                 //end of DOMContentLoaded
             });
-            
+
             let animationCounter = 0; // 用于生成唯一动画名称
             
             function rotateImage(div) {
@@ -971,7 +835,27 @@ document.querySelectorAll('.player').forEach(player => {
     stopAnimation();
   });
 });
+
         </script><a href="info.html">版权信息</a><a href="archive.html">存档</a>
                     </div>
+                    <script>
+                    const total = 83621;
+                        function formatFollowers(total) {
+                    if (total < 1000) {
+                        return total;
+                    } else if (total < 1000000) {
+                        return `${(total / 1000).toFixed(1)}K`;
+                    } else if (total < 1000000000) {
+                        return `${(total / 1000000).toFixed(1)}M`;
+                    } else {
+                        return `${(total / 1000000000).toFixed(2)}B`;
+                    }
+                }
+                
+                const formatted = formatFollowers(total);
+            
+                // 显示到指定的span元素中
+                document.getElementById('followers').textContent = '+' + formatted;
+                        </script>
                 </body>
             </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息 - Untitled</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+            margin: 0 auto;
+            max-width: 1024px;
+            border-left: 1px solid var(--md-outline);
+            border-right: 1px solid var(--md-outline);
+            background: url(images/background.jpg) center/cover fixed no-repeat;
+        }
+        
+        /* 颜色变量 */
+        :root {
+            /* 浅色模式 */
+            --md-background: #ffffff;
+            --md-surface: #f8f9fa;
+            --md-surface-variant: #f1f3f4;
+            --md-on-background: #202124;
+            --md-on-surface: #3c4043;
+            --md-on-surface-variant: #5f6368;
+            --md-outline: #dadce0;
+            --md-blue: #1a73e8;
+            --md-green: #34a853;
+            --md-red: #ea4335;
+            --md-yellow: #fbbc04;
+            --header-bg: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* 深色模式 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --md-background: #202124;
+                --md-surface: #2d2e30;
+                --md-surface-variant: #3c4043;
+                --md-on-background: #e8eaed;
+                --md-on-surface: #bdbfc2;
+                --md-on-surface-variant: #9aa0a6;
+                --md-outline: #5f6368;
+                --md-blue: #8ab4f8;
+                --md-green: #81c995;
+                --md-red: #f28b82;
+                --md-yellow: #fde293;
+                --header-bg: rgba(32, 33, 36, 0.9);
+            }
+            
+           }
+        /* 应用样式 */
+        body {
+            background-color: var(--md-background);
+            color: var(--md-on-background);
+        }
+        
+        .header, .footer {
+            padding: 16px;
+            border-bottom: 1px solid var(--md-outline);
+            position: sticky;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 999;
+            user-select: none;
+        }
+        .icon{ fill:var(--md-on-background); }
+        .header {
+            font-weight: 500;
+            font-size: 20px;
+            top: 0;
+            background-color: var(--header-bg);
+        }
+        
+        .footer {
+            font-size: 12px;
+            bottom: 0;
+            background-color: var(--header-bg);
+            color: var(--md-on-surface);
+        }
+        .footer a{
+            font-size : 12px;
+            margin-left: 1rem;
+        }
+        
+        .tweet {
+            padding: 16px;
+            border-bottom: 1px solid var(--md-outline);
+            display: flex;
+            background-color: var(--md-background);
+        }
+        
+        .tweet-content { flex: 1; line-height:2; }
+        
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .tweet-text, a {
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-size: 15px;
+            color: var(--md-on-background);
+        }
+        
+        a {
+            color: rgb(29, 155, 240);
+            text-decoration: none;
+        }
+        .header a{
+            font-size: 20px;
+            color: var(--md-on-background);
+        }
+        
+        a:hover { text-decoration: underline; }
+
+        .bottom-banner {
+            background: url(images/profile.jpg) no-repeat;
+            background-size: cover;
+            height: 33px;
+            background-position: bottom center;
+            padding-left: 1rem;
+            line-height: 33px;
+            font-size: 16px;
+            color: #dadce0;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+        }
+        ul,li{
+            line-height: 2;
+        }
+    </style>    
+</head>
+<body>
+    <div class="header"><a href="/index.html"><svg t="1746847106578" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1568" width="32" height="32"><path  class="icon" d="M446.31 135.36c59.14-32.57 133.57-17.46 177.33 32.42 20.22 23.05 36.34 49.86 53.08 75.76 54.92 85.02 109.37 170.34 163.78 255.69 14.68 23.02 11.74 37.13-10.11 53.81-3.85 2.94-7.82 5.8-12.04 8.17-32.65 18.35-40.83 16.37-60.85-14.6-71.42-110.44-143.06-220.74-214.09-331.43-20.69-32.24-49.06-54.85-82.48-72.11-4.21-2.17-8.4-4.43-14.62-7.71zM165.01 653.32c-20.77-42.48-23.41-82.99-0.47-119.52C213.2 456.32 265.31 381 315.98 304.77c28.85-43.4 58.17-86.5 86.11-130.47 8.39-13.21 18.19-15.94 29.93-9.09 19.47 11.36 37.87 24.56 55.3 36.05-68.12 106.25-134 208.45-199.16 311.1-14.88 23.45-27.1 48.58-41 72.66-2.48 4.3-6.62 8.65-11.05 10.66-27.47 12.48-52.05 28.44-71.1 57.64zM702.39 785.54c-47.62 32.71-93.48 64.21-141.88 97.46-0.68-7.98-1.5-13.09-1.5-18.2-0.08-70.43 0.39-140.87-0.36-211.3-0.19-17.39 5.33-23.46 22.96-23.11 47.95 0.96 95.97-0.91 143.89 0.67 52.88 1.75 95.25-19.04 131.85-54.99 3.36-3.3 6.85-6.48 10.48-9.92 14.29 27.24 6.02 74.23-20.03 101.21-28.96 29.99-63.04 50.9-107.28 49.31-23.04-0.83-46.14 0.14-69.21-0.16-11.27-0.15-17.1 3.87-16.39 15.94 0.89 15.09-4.26 34.43 3.27 44.05 6.65 8.49 27.13 6.14 44.2 9.04zM468.81 880.48c-45.78-32.29-91.55-64.57-141.87-100.06h48.12v-60.93c-62.01-2.91-128.66 10.55-183.11-37.54 14.52-26.2 37.09-42.29 60.66-57.17 2.63-1.66 6.9-1.38 10.32-1.06 32.99 3.08 65.9 7.84 98.95 9.16 32.06 1.28 64.27-0.59 96.39-1.8 11.18-0.42 17.17 2.18 17.13 14.68-0.23 77.57-0.12 155.15-0.12 232.72-2.16 0.66-4.31 1.33-6.47 2z" fill="#ffffff" p-id="1569"></path></svg><span style="display:inline-block;transform: translate(5px,-8px);">高级不可回收物</span></a></div>
+<div class="tweet">                    
+        <div class="tweet-content">
+            <div class="tweet-header"><h1>版权信息</h1></div>
+            <div class="tweet-text">
+                <ul>
+                    <li>头像 - <a href="images/avatar.gif">avatar.gif</a> - 王卯卯</li>
+                    <li>背景 - <a href="images/background.jpg">background.jpg</a> - CREDIT : Aimer 花の唄 / I beg you / 春はゆく , LICENCE : Sony Music Entertainment</li>
+                    <li>其余媒体版权已在其后注明。</li>
+                </ul>
+            </div>
+            <div class="tweet-header"><h1>Github源代码</h1></div>
+            <div class="tweet-text"><p>代码下载 <a href="//github.com/sunorz/micro-twitter" target="_blank">https://github.com/sunorz/micro-twitter</a></p>
+            <p>本项目的部分代码由 <a href="//deepseek.com" target="_blank">DeepSeek Chat</a> 、 <a href="//www.doubao.com" target="_blank">豆包AI</a> 、 <a href="//chatgpt.com/" target="_blank">ChatGPT</a> 生成，并经过人工修改和优化。</p>
+            </div>
+            <div class="tweet-header"><h1>作者信息</h1></div>
+            <div class="tweet-text">访问 <a href="//blog.kkii.org" target="_blank">https://blog.kkii.org/</a> 了解更多。
+            </div>
+            </div></div>
+    <div class="bottom-banner">information</div>
+       <div class="footer">
+        &copy; Untitled , <script>const date = new Date(); document.write(date.getFullYear()); </script><a href="archive.html">存档</a>
+       </div>
+</body>
+</html>

@@ -48,10 +48,9 @@ My blog: [卡库伊2.0](https://blog.kkii.org).
 | 路径 | 例子 |
 | :---- | :---- |
 |*images/post/*| 250517-1.webp |
-|*videos/post/*| 250517-1.mp4 |
+|*videos/*| 250517-1.mp4 |
 |*private-post/images/*| 250517-1.webp |
 |*private-post/images/*| 250517-1\.md |
-|*private-post/videos/*| 250517-1.mp4 |
 
 你在该仓库discussions的留言会显示在我的 micro-twitter 里 :)
 
