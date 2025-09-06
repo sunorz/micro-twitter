@@ -1,0 +1,52 @@
+<?php
+require 'totp_functions.php';
+require __DIR__ . '/vendor/autoload.php'; // 引入 endroid/qr-code 3.5 自动加载
+
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\ErrorCorrectionLevel;
+
+$config_file = __DIR__.'/config.php';
+$account = 'CUSTOM_USERNAME';
+
+// 第一次生成 secret
+if (!file_exists($config_file)) {
+    $secret = generate_secret();
+} else {
+    include $config_file;
+    $secret = $TOTP_SECRET;
+}
+echo 'SECRET:'.$secret;
+// 生成 otpauth URI
+$otpauth = get_otpauth_uri($secret, $account);
+
+// 生成二维码
+$qrCode = new QrCode($otpauth);
+$qrCode->setSize(200);
+$qrCode->setErrorCorrectionLevel(ErrorCorrectionLevel::HIGH());
+$qrCodeData = base64_encode($qrCode->writeString());
+
+$msg = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $code = $_POST['code'] ?? '';
+    if (verify_totp($secret, $code)) {
+        if (!file_exists($config_file)) {
+            file_put_contents(
+                $config_file,
+                "<?php\n\$TOTP_SECRET='$secret';\n\$USERNAME='$account';"
+            );
+        }
+        $msg = "绑定成功，secret 已固定";
+    } else {
+        $msg = "验证码错误";
+    }
+}
+
+?>
+<h2>绑定二维码（唯一用户）</h2>
+<img src="data:image/png;base64,<?= $qrCodeData ?>" />
+<p>账号: <?= htmlspecialchars($account) ?></p>
+<form method="post">
+    <input type="text" name="code" placeholder="输入6位动态码">
+    <button>确认绑定</button>
+</form>
+<?php if($msg) echo "<p>$msg</p>"; ?>

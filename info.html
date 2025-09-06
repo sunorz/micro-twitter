@@ -1,162 +1,522 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="google" content="notranslate">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信息 - Untitled</title>
-    <style>
-        /* 基础样式 */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Microsoft YaHei", sans-serif;
-            margin: 0 auto;
-            max-width: 1024px;
-            border-left: 1px solid var(--md-outline);
-            border-right: 1px solid var(--md-outline);
-            background: url(images/background.jpg) center/cover fixed no-repeat;
-        }
-        
-        /* 颜色变量 */
-        :root {
-            /* 浅色模式 */
-            --md-background: #ffffff;
-            --md-surface: #f8f9fa;
-            --md-surface-variant: #f1f3f4;
-            --md-on-background: #202124;
-            --md-on-surface: #3c4043;
-            --md-on-surface-variant: #5f6368;
-            --md-outline: #dadce0;
-            --md-blue: #1a73e8;
-            --md-green: #34a853;
-            --md-red: #ea4335;
-            --md-yellow: #fbbc04;
-            --header-bg: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* 深色模式 */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --md-background: #202124;
-                --md-surface: #2d2e30;
-                --md-surface-variant: #3c4043;
-                --md-on-background: #e8eaed;
-                --md-on-surface: #bdbfc2;
-                --md-on-surface-variant: #9aa0a6;
-                --md-outline: #5f6368;
-                --md-blue: #8ab4f8;
-                --md-green: #81c995;
-                --md-red: #f28b82;
-                --md-yellow: #fde293;
-                --header-bg: rgba(32, 33, 36, 0.9);
-            }
-            
-           }
-        /* 应用样式 */
-        body {
-            background-color: var(--md-background);
-            color: var(--md-on-background);
-        }
-        
-        .header, .footer {
-            padding: 16px;
-            border-bottom: 1px solid var(--md-outline);
-            position: sticky;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            z-index: 999;
-            user-select: none;
-        }
-        .icon{ fill:var(--md-on-background); }
-        .header {
-            font-weight: 500;
-            font-size: 20px;
-            top: 0;
-            background-color: var(--header-bg);
-        }
-        
-        .footer {
-            font-size: 12px;
-            bottom: 0;
-            background-color: var(--header-bg);
-            color: var(--md-on-surface);
-        }
-        .footer a{
-            font-size : 12px;
-            margin-left: 1rem;
-        }
-        
-        .tweet {
-            padding: 16px;
-            border-bottom: 1px solid var(--md-outline);
-            display: flex;
-            background-color: var(--md-background);
-        }
-        
-        .tweet-content { flex: 1; line-height:2; }
-        
-        .tweet-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4px;
-        }
-        .tweet-text, a {
-            margin-bottom: 12px;
-            line-height: 1.5;
-            font-size: 15px;
-            color: var(--md-on-background);
-        }
-        
-        a {
-            color: rgb(29, 155, 240);
-            text-decoration: none;
-        }
-        .header a{
-            font-size: 20px;
-            color: var(--md-on-background);
-        }
-        
-        a:hover { text-decoration: underline; }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <meta name="color-scheme" content="light dark">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>信息 - 高级不可回收物</title>
+        <link rel="stylesheet" href="assets/info.min.css?v=2.3.29">
+    </head>
+    <body>
+        <script>
+  // 获取浏览器提供的页面最后修改时间
+  let lastModified = new Date(document.lastModified);
 
-        .bottom-banner {
-            background: url(images/profile.jpg) no-repeat;
-            background-size: cover;
-            height: 33px;
-            background-position: bottom center;
-            padding-left: 1rem;
-            line-height: 33px;
-            font-size: 16px;
-            color: #dadce0;
-            letter-spacing: 0.5rem;
-            text-transform: uppercase;
+  // 转换为中国标准时间（UTC+8）
+  let utc = lastModified.getTime() + (lastModified.getTimezoneOffset() * 60000); // 转为 UTC 时间戳
+  let cstDate = new Date(utc + 8 * 3600 * 1000); // 加上 8 小时
+
+  // 格式化为 YYYY-MM-DD
+  let year = cstDate.getFullYear();
+  let month = String(cstDate.getMonth() + 1).padStart(2, '0');
+  let day = String(cstDate.getDate()).padStart(2, '0');
+
+  
+</script>
+        <div class="header"><a href="/x.php"><svg t="1746847106578" viewBox="0
+                    0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1568" width="32"
+                    height="32"><path class="icon" d="M446.31 135.36c59.14-32.57
+                        133.57-17.46 177.33 32.42 20.22 23.05 36.34 49.86 53.08
+                        75.76 54.92 85.02 109.37 170.34 163.78 255.69 14.68
+                        23.02 11.74 37.13-10.11 53.81-3.85 2.94-7.82 5.8-12.04
+                        8.17-32.65 18.35-40.83
+                        16.37-60.85-14.6-71.42-110.44-143.06-220.74-214.09-331.43-20.69-32.24-49.06-54.85-82.48-72.11-4.21-2.17-8.4-4.43-14.62-7.71zM165.01
+                        653.32c-20.77-42.48-23.41-82.99-0.47-119.52C213.2 456.32
+                        265.31 381 315.98 304.77c28.85-43.4 58.17-86.5
+                        86.11-130.47 8.39-13.21 18.19-15.94 29.93-9.09 19.47
+                        11.36 37.87 24.56 55.3 36.05-68.12 106.25-134
+                        208.45-199.16 311.1-14.88 23.45-27.1 48.58-41 72.66-2.48
+                        4.3-6.62 8.65-11.05 10.66-27.47 12.48-52.05 28.44-71.1
+                        57.64zM702.39 785.54c-47.62 32.71-93.48 64.21-141.88
+                        97.46-0.68-7.98-1.5-13.09-1.5-18.2-0.08-70.43
+                        0.39-140.87-0.36-211.3-0.19-17.39 5.33-23.46 22.96-23.11
+                        47.95 0.96 95.97-0.91 143.89 0.67 52.88 1.75 95.25-19.04
+                        131.85-54.99 3.36-3.3 6.85-6.48 10.48-9.92 14.29 27.24
+                        6.02 74.23-20.03 101.21-28.96 29.99-63.04 50.9-107.28
+                        49.31-23.04-0.83-46.14 0.14-69.21-0.16-11.27-0.15-17.1
+                        3.87-16.39 15.94 0.89 15.09-4.26 34.43 3.27 44.05 6.65
+                        8.49 27.13 6.14 44.2 9.04zM468.81
+                        880.48c-45.78-32.29-91.55-64.57-141.87-100.06h48.12v-60.93c-62.01-2.91-128.66
+                        10.55-183.11-37.54 14.52-26.2 37.09-42.29 60.66-57.17
+                        2.63-1.66 6.9-1.38 10.32-1.06 32.99 3.08 65.9 7.84 98.95
+                        9.16 32.06 1.28 64.27-0.59 96.39-1.8 11.18-0.42 17.17
+                        2.18 17.13 14.68-0.23 77.57-0.12 155.15-0.12 232.72-2.16
+                        0.66-4.31 1.33-6.47 2z" fill="#ffffff" p-id="1569"></path></svg><span
+                    style="display:inline-block;transform:
+                    translate(5px,-8px);">高级不可回收物</span></a></div>
+        <div class="tweet">
+            <div class="tweet-content">
+                <div class="tweet-header"><h2>版权信息</h2></div>
+                <div class="tweet-text">
+                    <ul>
+                        <li>资料卡片背景 - <a href="images/profile.jpg?v=2">profile.jpg</a>
+                            - CREDIT : （株）サンリオ, LICENCE : Sanrio</li>
+                        <li>蘑菇图标 - <img src="images/google-icon.svg" alt=""
+                                height="18"> - CREDIT : <a
+                                href="//www.iconfont.cn/user/detail?uid=12656189&nid=EKah83c1bmwx"
+                                target="_blank">qiqilili</a></li>
+                        <li>小人图标 - <svg xmlns="http://www.w3.org/2000/svg"
+                                version="1.1" viewBox="0 0 116.68 95.43"
+                                width="18" height="18">
+
+                                <path class="st0"
+                                    d="M116.68,40.28c0,5.38-4.36,9.74-9.74,9.74s-9.74-4.36-9.74-9.74,4.36-9.74,9.74-9.74,9.74,4.36,9.74,9.74Z"
+                                    />
+                                    <g>
+                                        <path class="st0"
+                                            d="M106.58,63.61c-.55-.33-1.13-.57-1.72-.71-.6-.16-1.24-.24-1.89-.2l-12.18.52c-1.32-1.98,7.68-7.16,9.9-9.9.54-.66.98-1.56,1.29-2.58-3.7-1.76-6.32-5.41-6.59-9.71-.26.02-.52.04-.8.07-23.6,2.48-31.52,22.7-35.15,27.55l-9.47,13.94-21.58,1.49c-2.73.06-4.89,2.32-4.83,5.05.06,2.73,2.33,4.89,5.05,4.83l24.89.53c2.19-.05,4.07-1.26,5.1-3.02l7.68-9.53,6.34-19.66h1.94l-2.19,6.79-6,18.62c-.73,1.96.27,4.14,2.23,4.87,1.96.73,4.14-.27,4.87-2.23l7.61-18.02,4.24-10.03h2l-5.43,12.86c.84-.01,1.67-.02,2.46-.04l9.44-.14-6.22,12.98c-1.42,2.33-.67,5.37,1.66,6.79s5.37.67,6.79-1.66l12.59-21.12c1.74-2.86.82-6.59-2.04-8.33Z"
+                                            />
+                                            <path class="st0"
+                                                d="M82.39,39.45l1.5,2.3c3.1-1.19,6.55-2.06,10.4-2.47l-4.41-5.34-9.85-11.93c-.98-1.33-3.14-1.41-4.83-.17-1.69,1.24-2.26,3.33-1.28,4.66l8.47,12.95Z"
+                                                />
+                                            </g>
+                                            <g>
+                                                <path class="st0"
+                                                    d="M69.07,9.11c-.32-.46-1.01-.53-1.54-.16l-1.27.89c-.53.37-.69,1.04-.37,1.5l12.64,18.02c.32.46,1.01.53,1.54.16l1.27-.89c.53-.37.7-1.04.37-1.5l-12.64-18.02Z"
+                                                    />
+                                                    <path class="st0"
+                                                        d="M1.4,2.48c.34,5.22,1.36,10.42,2.88,15.44.77,2.51,1.67,4.97,2.75,7.35,1.08,2.37,2.34,4.67,3.88,6.73.77,1.02,1.62,1.99,2.56,2.81.94.82,1.99,1.5,3.11,1.87,1.12.38,2.3.41,3.42.08,1.12-.32,2.17-.98,3.11-1.79,1.89-1.64,3.3-3.81,4.67-6.06,1.36-2.24,2.63-4.56,3.89-6.88,2.52-4.65,4.91-9.42,8.05-13.85,1.58-2.19,3.37-4.32,5.69-5.96,1.16-.81,2.46-1.48,3.88-1.85,1.41-.38,2.91-.45,4.34-.24,2.88.42,5.41,1.8,7.64,3.38,2.24,1.6,4.22,3.45,6.09,5.4,3.71,3.91,6.94,8.19,9.99,12.57l-1.81,1.25c-2.98-4.34-6.13-8.57-9.7-12.38-1.79-1.89-3.68-3.68-5.76-5.18-2.06-1.48-4.34-2.7-6.74-3.06-1.19-.18-2.39-.13-3.55.18-1.15.3-2.25.84-3.27,1.54-2.04,1.41-3.74,3.38-5.26,5.47-3.04,4.22-5.45,8.94-8.01,13.59-1.27,2.33-2.57,4.66-3.98,6.94-1.39,2.25-2.91,4.6-5.06,6.44-1.07.91-2.32,1.7-3.76,2.11-1.43.41-3.01.36-4.4-.13-1.4-.47-2.61-1.29-3.66-2.21-1.05-.93-1.96-1.97-2.77-3.07-1.62-2.2-2.91-4.6-4.01-7.05-1.1-2.46-2.01-4.99-2.78-7.55C1.32,13.21.32,7.92,0,2.56l1.4-.08Z"
+                                                        />
+                                                    </g>
+                                                </svg> - LICENCE : <a
+                                                    href="//pictogram2.com/"
+                                                    target="_blank">人間ピクトグラム素材のギャラリー</a></li>
+                                            <li>插件 - <a href="//videojs.com/"
+                                                    target="_blank">video.js</a>
+                                                / <a
+                                                    href="//html2canvas.hertzen.com/"
+                                                    target="_blank">html2canvas</a></li>
+                                            <li>其余媒体版权已在其后注明。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tweet-header"><h2>Github源代码</h2></div>
+                                    <div class="tweet-text">
+
+                                        <p>代码下载 <a
+                                                href="//github.com/sunorz/micro-twitter"
+                                                target="_blank"><img
+                                                    src="https://img.shields.io/badge/version-2.2.1-2ecc71?style=flat&logo=github"
+                                                    style="vertical-align:
+                                                    middle;margin-left:0.5rem;"></a></p>
+                                        <p>本项目的部分代码由 <a href="//deepseek.com"
+                                                target="_blank">DeepSeek Chat</a>
+                                            、 <a href="//www.doubao.com"
+                                                target="_blank">豆包AI</a> 、 <a
+                                                href="//chatgpt.com/"
+                                                target="_blank">ChatGPT</a>
+                                            辅助生成。</p>
+                                        <h3>更新日志</h3>
+                                        <div class="log">
+                                            <div class="pit-top">
+                                            </div>
+                                            <div class="pit">
+                                                <img
+                                                    src="images/pit-coin-flip.gif">
+                                                <img
+                                                    src="images/timgs/250819-1.webp">
+                                                <img src="images/pit-tool.gif">
+                                                <img src="images/pit-rope.gif">
+                                                <img src="images/pit-beef.gif">
+                                                <img
+                                                    src="images/pit-monster.gif">
+                                            </div>
+                                            <span>2.2.2_static_final</span><ul>
+                                                <li>新增：首页到浅色内容的过渡。<mark>#ChatGPT</mark></li>
+                                                <li>新增：支持m3u8视频格式。<mark>#ChatGPT</mark></li>
+                                                <li>修改：把评论换成转发。</li>
+                                                <li>修改：（1/2）存档页面布局调整。<mark>#ChatGPT</mark></li>
+                                                <li>修改：重新设计粉丝增长函数。<mark>#ChatGPT</mark></li>
+                                                <li>修改：存档页面的环比粉丝可以自动统计啦~<mark>#ChatGPT</mark></li>
+                                                <li>修复：禁止音频自动加载。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3</span><ul>
+                                                <li>新增：全内容页面的身份认证。<mark>#ChatGPT</mark></li>
+                                                <li>修改：某些图标。</li>
+                                            </ul>
+                                            <span>2.3.1</span><ul>
+                                                <li>新增：发布页的动态效果。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.2</span><ul>
+                                                <li>新增：点击转发生成图片。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.3</span><ul>
+                                                <li>修改：（2/2）存档页面布局调整。</li>
+                                            </ul>
+                                            <span>2.3.4</span><ul>
+                                                <li>修复：调整验证顺序。<mark>#豆包AI</mark></li>
+                                                <li>修复：首页在浅色模式下的验证。</li>
+                                            </ul>
+                                            <span>2.3.5</span><ul>
+                                                <li>修复：首页没带key的跳转。</li>
+                                                <li>修复：发布页切换窗口大小的背景抖动。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.6</span><ul>
+                                                <li>新增：存档页面显示最新Tweet的部分内容。</li>
+                                                <li>修复：首页到浅色内容的过渡节奏。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.7</span><ul>
+                                                <li>修复：关闭了PHP的Debug提示。<mark>#ChatGPT</mark></li>
+                                                <li>新增：存档类型统计。<mark>#ChatGPT</mark></li>
+                                                <li>修改：发布按钮。</li>
+                                                <li>修改：加密了key。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.8</span><ul>
+                                                <li>新增：Tweet支持存档、删除、修改（支持原文和译文）。<mark>#DeepSeek
+                                                        Chat #ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.9</span><ul>
+                                                <li>修复：交互样式和对话框。<mark>#ChatGPT</mark></li>
+                                                <li>修复：跨月归档的错误。<mark>#ChatGPT</mark></li>
+                                                <li>修复：分享图片水印超过边界。<mark>#ChatGPT</mark></li>
+                                                <li>修复：由于加入id导致Tweet总数不增长。<mark>#ChatGPT</mark></li>
+                                                <li>修复：分享图片排版。</li>
+                                                <li>修复：发布图片类Tweet后，存档页面的布局。</li>
+                                                <li>修复：后台安全性。<mark>#ChatGPT</mark></li>
+                                                <li>修复：禁用Edge强制深色。<mark>#ChatGPT</mark></li>
+                                                <li>修复：遮罩层交互问题（1/2）。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.10</span><ul>
+                                                <li>修复：后台安全性。</li>
+                                                <li>修复：移动端转发按钮失效的问题。<mark>#ChatGPT</mark></li>
+                                                <li>修复：遮罩层交互问题（2/2）。<mark>#豆包AI</mark></li>
+                                                <li>修改：弹出菜单。<mark>#豆包AI</mark></li>
+                                                <li>修复：遮罩层模糊。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.11</span><ul>
+                                                <li>修复：CSS和JS的缓存刷新问题。<mark>#豆包AI</mark></li>
+                                                <li>修改：存档页面布局。<mark>#豆包AI</mark></li>
+                                                <li>删除：不必要的图标。</li>
+                                            </ul>
+                                            <span>2.3.12</span><ul>
+                                                <li>修复：在不登录时分享图片报错。<mark>#ChatGPT</mark></li>
+                                                <li>修复：请求图片的报错。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.13</span><ul>
+                                                <li>修复：请求图片后加载的尺寸。<mark>#豆包AI</mark></li>
+                                                <li>修复：请求媒体加载版权的报错。<mark>#豆包AI</mark></li>
+                                                <li>修复：m3u8播放问题。<mark>#豆包AI</mark></li>
+                                                <li>修复：验证弹窗和其他验证。<mark>#豆包AI</mark></li>
+                                                <li>修复：在深色模式下存档详情页的加载图标不变色。</li>
+                                            </ul>
+                                            <span>2.3.14</span><ul>
+                                                <li>修复：请求媒体的验证流程。<mark>#豆包AI</mark></li>
+                                                <li>修复：请求m3u8文件时的交互不连贯。<mark>#豆包AI</mark></li>
+                                                <li>新增：请求报错代码。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.15</span><ul>
+                                                <li>修复：在iOS端加载视频的尺寸。<mark>#豆包AI</mark></li>
+                                                <li>新增：一个彩蛋。<mark>#ChatGPT #豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.16</span><ul>
+                                                <li>修改：归档和删除使用异步提交。<mark>#豆包AI</mark></li>
+                                                <li>修复：彩蛋（1/2）。</li>
+                                                <li>修复：音频发布的代码模板。</li>
+                                            </ul>
+                                            <span>2.3.17</span><ul>
+                                                <li>修复：某些图片的缓存刷新问题。</li>
+                                                <li>修复：音频控件交互。<mark>#ChatGPT
+                                                        #豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.18</span><ul>
+                                                <li>修复：彩蛋（2/2）。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.19</span><ul>
+                                                <li>新增：存档新增历史头像和资料卡片背景。<mark>#ChatGPT</mark></li>
+                                                <li>修改：存档详情图片分享的脚本共用。<mark>#ChatGPT</mark></li>
+                                                <li>修改：保存图片时的命名。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.20</span><ul>
+                                                <li><del title="不完全兼容">修复：在iOS端加载图标动画无效。</del></li>
+                                            </ul>
+                                            <span>2.3.21</span><ul>
+                                                <li>修改：将后台从http basic认证改为TOTP验证。<mark>#ChatGPT
+                                                        #豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.22</span><ul>
+                                                <li>修复：验证流程的参数传递。</li>
+                                                <li>修复：首页预加载导致权限残留。</li>
+                                                <li>修改：验证页面动画交互。<mark>#DeepSeek
+                                                        Chat</mark></li>
+                                            </ul>
+                                            <span>2.3.23</span><ul>
+                                                <li>修复：验证提示。<mark>#豆包AI</mark></li>
+                                                <li>删除：几处调试提示。</li>
+                                                <li>新增：发布内容支持&lt;code&gt;，&lt;pre&gt;，&lt;kbd&gt;内包裹标签的HTML实体转换。<mark>#DeepSeek
+                                                        Chat</mark></li>
+                                                <li>新增：内容翻译后自动同步到X.com&nbsp;&nbsp;<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.24</span><ul>
+                                                <li>修复：同步前加强推文的格式检查。<mark>#ChatGPT
+                                                        #豆包AI</mark></li>
+                                                <li>修复：返回同步结果信息给用户。<mark>#ChatGPT
+                                                        #豆包AI</mark></li>
+                                                <li>修复：验证页的凭据过期。</li>
+                                                <li>修改：修改、发布页使用异步提交。<mark>#ChatGPT
+                                                        #豆包AI</mark></li>
+                                                <li>修改：修改支持切换普通模式和同步模式。<mark>#ChatGPT
+                                                        #豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.25</span><ul>
+                                                <li>修复：同步前文字处理。<mark>#ChatGPT</mark></li>
+                                                <li>修改：将展示页全部内联js代码外链。</li>
+                                                <li>新增：仅设置展示页背景为每日一图。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.26</span><ul>
+                                                <li>修复：每日一图。<mark>#ChatGPT</mark></li>
+                                            </ul>
+                                            <span>2.3.27</span><ul>
+                                                <li>修复：在移动端，验证页点击弹出输入法遮挡输入框。<mark>#DeepSeek Chat</mark></li>
+                                                <li>修复：视频请求错误后，直接消失。</li>
+                                                <li>修复：视频请求返回错误提示。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.28</span><ul>
+                                                <li>修改：首页验证的动态显示。<mark>#豆包AI</mark></li>
+                                                <li>新增：发布页点击复制key。<mark>#豆包AI</mark></li>
+                                            </ul>
+                                            <span>2.3.29</span><ul>
+                                                <li>修复：发布英文时检查并替换标点。<mark>#ChatGPT</mark></li>
+                                                <li>新增：文件图标包。</li>
+                                            </ul>
+                                            <ul><li><script>document.write(`Last Updated: ${year}-${month}-${day}`);</script></li></ul>
+                                        </div>
+                                    </div>
+                                    <div class="tweet-header"><h2>作者信息</h2></div>
+                                    <div class="tweet-text">访问 <a
+                                            href="//blog.kkii.org"
+                                            target="_blank">https://blog.kkii.org/</a>
+                                        了解更多。
+                                    </div>
+                                </div></div>
+                            <div class="bottom-banner">information</div>
+                            <div class="footer">
+                                &copy; 高级不可回收物 , <script>const date = new Date(); document.write(date.getFullYear()); 
+// 彩蛋
+console.log("%c真棒，你发现了彩蛋。试试点击矿工或金币。\nAwesome! You found a secret! Try tapping the miner or the coin.","font-size: 14px; color:#ff5722;");
+console.warn("找不到矿工时，请点击金币。\nNo miner in sight? Just tap the coin!");
+
+
+const pit = document.querySelector('.pit');
+const coin = pit.children[0];       
+const character = pit.children[1];  
+const boss = pit.lastElementChild;  
+const items = pit.querySelectorAll('img:not(:first-child):not(:nth-child(2)):not(:last-child)');
+const spans = document.querySelectorAll('.tweet-text span');
+
+const PIT_HEIGHT = 503;
+const END_Y = PIT_HEIGHT - 30;
+// 定义人物和boss的Y轴范围
+const MIN_Y = 20;
+const MAX_Y = 450;
+let MOVE_SPEED = 1;
+let animationId;
+let isPaused = false;
+let hasAttacked = false;
+
+// debug 模式
+const DEBUG_MODE = false;
+const COOLDOWN_TIME = DEBUG_MODE ? 1 : 60 * 1000 ;
+
+// 延迟函数
+function delay(ms) { return new Promise(res => setTimeout(res, ms)); }
+
+// 初始化人物、boss top（随机/调试）并保证不与物品重叠
+function initPositions() {
+    const now = Date.now();
+    const lastCharTime = localStorage.getItem('charLastTime');
+    const lastBossTime = localStorage.getItem('bossLastTime');
+    const savedCharTop = parseFloat(localStorage.getItem('charTop'));
+    const savedBossTop = parseFloat(localStorage.getItem('bossTop'));
+
+    // 获取所有物品的位置和范围
+    const itemPositions = Array.from(items).map(item => {
+        const rect = item.getBoundingClientRect();
+        const pitRect = pit.getBoundingClientRect();
+        // 计算物品在pit内的相对top位置
+        const top = parseFloat(item.style.top) || (rect.top - pitRect.top);
+        // 物品尺寸为19.2x19.2px
+        return {
+            top: top,
+            bottom: top + 19.2
+        };
+    });
+
+    let usedTops = [];
+
+    // 修改随机位置生成函数，限制在20px~480px之间
+    function getRandomTop() {
+        let top, tries = 0;
+        const entityHeight = 30; // 人物和boss的大致高度，用于碰撞检测
+        do {
+            // 生成MIN_Y到MAX_Y之间的随机数
+            top = Math.floor(Math.random() * (MAX_Y - MIN_Y + 1)) + MIN_Y;
+            tries++;
+            if (tries > 50) break; // 尝试50次后如果仍冲突则强制返回
+        } while (
+            // 检查是否与物品重叠
+            itemPositions.some(item => 
+                !(top + entityHeight < item.top || top > item.bottom)
+            ) || 
+            // 检查是否与已生成的位置太近
+            usedTops.some(t => Math.abs(t - top) < 40)
+        );
+        usedTops.push(top);
+        return top;
+    }
+
+    let charTop, bossTop;
+    if (DEBUG_MODE) {
+        bossTop = getRandomTop();
+        charTop = bossTop - 50;
+        // 确保调试模式下也在范围内
+        if (charTop < MIN_Y) charTop = MIN_Y;
+        if (charTop > MAX_Y) charTop = MAX_Y;
+    } else {
+        if (!lastCharTime || now - lastCharTime > COOLDOWN_TIME) charTop = getRandomTop();
+        else charTop = savedCharTop || getRandomTop();
+
+        if (!lastBossTime || now - lastBossTime > COOLDOWN_TIME) bossTop = getRandomTop();
+        else bossTop = savedBossTop || getRandomTop();
+
+        localStorage.setItem('charTop', charTop);
+        localStorage.setItem('charLastTime', now);
+        localStorage.setItem('bossTop', bossTop);
+        localStorage.setItem('bossLastTime', now);
+    }
+
+    // 最终检查，确保位置在范围内
+    if (charTop < MIN_Y) charTop = MIN_Y;
+    if (charTop > MAX_Y) charTop = MAX_Y;
+    if (bossTop < MIN_Y) bossTop = MIN_Y;
+    if (bossTop > MAX_Y) bossTop = MAX_Y;
+
+    character.style.top = charTop + 'px';
+    boss.style.top = bossTop + 'px';
+
+    // cursor 设置
+    items.forEach(item => { item.style.opacity='1'; item.dataset.used='false'; item.style.cursor='default'; });
+    boss.style.opacity='1'; boss.style.cursor='default';
+    coin.style.opacity='1'; coin.style.cursor='pointer';
+    character.style.cursor='pointer';
+
+    hasAttacked = false; isPaused=false;
+
+    // 初始化 span
+    spans.forEach(span=>{span.style.transform=''; span.style.transition='transform 0.5s ease'; span.style.display='inline-block';});
+}
+
+// 碰撞检测
+function isColliding(a,b){
+    const ra=a.getBoundingClientRect(), rb=b.getBoundingClientRect();
+    return !(ra.bottom<rb.top || ra.top>rb.bottom || ra.right<rb.left || ra.left>rb.right);
+}
+
+// 物品碰撞
+async function handleItemCollision(item){
+    if(item.dataset.used==='true') return;
+    item.dataset.used='true'; isPaused=true;
+    for(let i=0;i<3;i++){ item.style.opacity='0'; await delay(150); item.style.opacity='1'; await delay(150);}
+    await delay(1000); item.style.opacity='0'; isPaused=false;
+}
+
+// boss 碰撞
+async function handleBossCollision(){
+    if(hasAttacked) return;
+    hasAttacked=true; isPaused=true;
+
+    await delay(1000); // 暂停1s
+
+    // 后退
+    const originalTop=parseFloat(character.style.top);
+    character.style.top=(originalTop-10)+'px';
+
+    // 上下抖动
+    for(let i=0;i<6;i++){
+        character.style.top=(originalTop + (i%2===0?-5:5))+'px';
+        await delay(100);
+    }
+    character.style.top=originalTop+'px';
+
+    // 暗红滤镜
+    character.style.filter='brightness(0.5) saturate(100%) sepia(100%) hue-rotate(-10deg) saturate(300%)';
+    await delay(800);
+
+    boss.style.opacity='0';
+    coin.src='/images/pit-aid.gif';
+    isPaused=false;
+}
+
+// span 点击立即平移
+function triggerSpanAnimation(){
+    spans.forEach(span=>{span.style.display='inline-block'; span.style.transform='translateX(40px)';});
+}
+
+// span 复位
+function resetSpanAnimation(){spans.forEach(span=>{span.style.transform='';});}
+
+// coin 到终点
+async function handleCoinReached(){
+    await delay(3000);
+    if(coin.src.includes('pit-aid.gif')){ 
+        coin.src='/images/pit-aid-get.gif';  
+        character.style.filter='';
         }
-        ul,li{
-            line-height: 2;
+        else{
+            coin.src='/images/pit-coin-get.gif'; 
         }
-    </style>    
-</head>
-<body>
-    <div class="header"><a href="/index.html"><svg t="1746847106578" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1568" width="32" height="32"><path  class="icon" d="M446.31 135.36c59.14-32.57 133.57-17.46 177.33 32.42 20.22 23.05 36.34 49.86 53.08 75.76 54.92 85.02 109.37 170.34 163.78 255.69 14.68 23.02 11.74 37.13-10.11 53.81-3.85 2.94-7.82 5.8-12.04 8.17-32.65 18.35-40.83 16.37-60.85-14.6-71.42-110.44-143.06-220.74-214.09-331.43-20.69-32.24-49.06-54.85-82.48-72.11-4.21-2.17-8.4-4.43-14.62-7.71zM165.01 653.32c-20.77-42.48-23.41-82.99-0.47-119.52C213.2 456.32 265.31 381 315.98 304.77c28.85-43.4 58.17-86.5 86.11-130.47 8.39-13.21 18.19-15.94 29.93-9.09 19.47 11.36 37.87 24.56 55.3 36.05-68.12 106.25-134 208.45-199.16 311.1-14.88 23.45-27.1 48.58-41 72.66-2.48 4.3-6.62 8.65-11.05 10.66-27.47 12.48-52.05 28.44-71.1 57.64zM702.39 785.54c-47.62 32.71-93.48 64.21-141.88 97.46-0.68-7.98-1.5-13.09-1.5-18.2-0.08-70.43 0.39-140.87-0.36-211.3-0.19-17.39 5.33-23.46 22.96-23.11 47.95 0.96 95.97-0.91 143.89 0.67 52.88 1.75 95.25-19.04 131.85-54.99 3.36-3.3 6.85-6.48 10.48-9.92 14.29 27.24 6.02 74.23-20.03 101.21-28.96 29.99-63.04 50.9-107.28 49.31-23.04-0.83-46.14 0.14-69.21-0.16-11.27-0.15-17.1 3.87-16.39 15.94 0.89 15.09-4.26 34.43 3.27 44.05 6.65 8.49 27.13 6.14 44.2 9.04zM468.81 880.48c-45.78-32.29-91.55-64.57-141.87-100.06h48.12v-60.93c-62.01-2.91-128.66 10.55-183.11-37.54 14.52-26.2 37.09-42.29 60.66-57.17 2.63-1.66 6.9-1.38 10.32-1.06 32.99 3.08 65.9 7.84 98.95 9.16 32.06 1.28 64.27-0.59 96.39-1.8 11.18-0.42 17.17 2.18 17.13 14.68-0.23 77.57-0.12 155.15-0.12 232.72-2.16 0.66-4.31 1.33-6.47 2z" fill="#ffffff" p-id="1569"></path></svg><span style="display:inline-block;transform: translate(5px,-8px);">高级不可回收物</span></a></div>
-<div class="tweet">                    
-        <div class="tweet-content">
-            <div class="tweet-header"><h1>版权信息</h1></div>
-            <div class="tweet-text">
-                <ul>
-                    <li>头像 - <a href="images/avatar.gif">avatar.gif</a> - 王卯卯</li>
-                    <li>背景 - <a href="images/background.jpg">background.jpg</a> - CREDIT : Aimer 花の唄 / I beg you / 春はゆく , LICENCE : Sony Music Entertainment</li>
-                    <li>其余媒体版权已在其后注明。</li>
-                </ul>
-            </div>
-            <div class="tweet-header"><h1>Github源代码</h1></div>
-            <div class="tweet-text"><p>代码下载 <a href="//github.com/sunorz/micro-twitter" target="_blank">https://github.com/sunorz/micro-twitter</a></p>
-            <p>本项目的部分代码由 <a href="//deepseek.com" target="_blank">DeepSeek Chat</a> 、 <a href="//www.doubao.com" target="_blank">豆包AI</a> 、 <a href="//chatgpt.com/" target="_blank">ChatGPT</a> 生成，并经过人工修改和优化。</p>
-            </div>
-            <div class="tweet-header"><h1>作者信息</h1></div>
-            <div class="tweet-text">访问 <a href="//blog.kkii.org" target="_blank">https://blog.kkii.org/</a> 了解更多。
-            </div>
-            </div></div>
-    <div class="bottom-banner">information</div>
-       <div class="footer">
-        &copy; Untitled , <script>const date = new Date(); document.write(date.getFullYear()); </script><a href="archive.html">存档</a>
-       </div>
-</body>
-</html>
+    coin.style.filter='brightness(1.8)'; await delay(800);
+    coin.style.opacity='0'; await delay(2000);
+    resetSpanAnimation(); coin.style.filter='';
+    
+}
+
+// 人物动画
+function animateCharacter(){
+    let currentY=parseFloat(character.style.top)||0, lastTime=null;
+    function step(timestamp){
+        if(!lastTime) lastTime=timestamp;
+        const delta=timestamp-lastTime; lastTime=timestamp;
+        if(!isPaused){
+            currentY+=MOVE_SPEED*(delta/16);
+            character.style.top=currentY+'px';
+            items.forEach(item=>{if(item.style.opacity!=='0' && isColliding(character,item)) handleItemCollision(item);});
+            if(boss.style.opacity!=='0' && isColliding(character,boss)) handleBossCollision();
+            if(currentY>=END_Y){cancelAnimationFrame(animationId); handleCoinReached(); return;}
+        }
+        animationId=requestAnimationFrame(step);
+    }
+    animationId=requestAnimationFrame(step);
+}
+
+// 页面加载初始化
+window.addEventListener('DOMContentLoaded',()=>{initPositions();});
+
+// 点击人物或 coin 开始动画
+function startAnimation(){
+    triggerSpanAnimation();
+    animateCharacter();
+    character.style.cursor='default'; coin.style.cursor='default';
+    character.removeEventListener('click',startAnimation);
+    coin.removeEventListener('click',startAnimation);
+}
+
+character.addEventListener('click',startAnimation);
+coin.addEventListener('click',startAnimation);
+    
+
+</script><a
+                                    href="archive.html">存档</a>
+                            </div>
+                        </body>
+                    </html>

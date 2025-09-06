@@ -1,56 +1,51 @@
 micro-twitter
 =================
 ![preview](preview.webp)
+
 ## English
+### Deployment Guide
 
-1. **post.php** is a backend posting interface that supports text, image, and video content types
+1. Ensure PHP >= 7.4
+2. Edit */config_auth.php*
+3. Rename */auth/index.php.bak* to */auth/index.php*
+4. Update the value of `$account`
+5. Open *http://yourdomain/auth/index.php*, scan the QR code using mobile apps like Google<sup>TM</sup> Authenticator, and enter the code to bind your account
+6. Copy the **SECRET** displayed on the page into */auth/config.php*, replacing `$TOTP_SECRET`
+7. Rename */auth/index.php* back to */auth/index.php.bak*
 
-2. Private posts and NSFW content are not supported for backend publishing
+### Notes
+Verification page: */auth/verify.php*
 
-3. The backend does not support image or video uploads
+Publishing page: */auth/post.php*
 
-4. Use nginx configuration to protect files under /private-post with HTTP Basic Authentication
+Visitor format: *http://yourdomain/?key=allowed_key*
 
-5. Copyright records for private images are stored in /private-post/images and can be automatically identified
+*/images/private* is not encrypted, handle it manually
 
-6. No database required, but PHP support is needed. If backend posting isn't required, you may delete post.php and switch to static-only
+No database is required; all operations are file-based. Therefore, files like **x2505.php** need to be created manually.
 
-### Media Storage Guide
+My blog: [卡库伊2.0](https://blog.kkii.org)
 
-| Path | Example |
-| :---- | :---- |
-|*images/post/*| 250517-1.webp |
-|*videos/post/*| 250517-1.mp4 |
-|*private-post/images/*| 250517-1.webp |
-|*private-post/images/*| 250517-1\.md |
-
-Your comments in this repo's discussions will show up in my micro-twitter feed :)
-
-My blog: [卡库伊2.0](https://blog.kkii.org).
 
 ## 中文
+### 部署指南
 
-1. **post.php** 是一个后台发布界面，支持文字、图片、视频三种类型
+1. PHP >= 7.4
+2. 修改 */config_auth.php*
+3. 重命名 */auth/index.php.bak* 为 */auth/index.php*
+4. 修改`$account`的值
+5. 访问*http://yourdomain/auth/index.php* ，使用Google<sup>TM</sup> Authenticator 等移动端APP扫码，输入code，即可绑定
+6. 将页面上显示的**SECRET**复制到 */auth/config.php* 替换掉`$TOTP_SECRET`
+7. 重命名 */auth/index.php* 为 */auth/index.php.bak*
+### 提示
+验证页：*/auth/verify.php*
 
-2. 私密帖子和nsfw的帖子不支持后台发表
+发布页：*/auth/post.php*
 
-3. 后台不支持图片和视频上传
+访客格式：*http://yourdomain/?key=allowed_key*
 
-4. 请使用 nginx 配置保护/private-post下的文件，如HTTP Basic验证
+*/images/private* 没有加密，自己处理
 
-5. 私密图片的版权记录在/private-post/images下，可以自动识别
-
-6. 不需要数据库，但需要PHP支持，如果不需要后台发布，可以删除 **post.php** ，改为纯静态
-
-### 媒体存放说明
-
-| 路径 | 例子 |
-| :---- | :---- |
-|*images/post/*| 250517-1.webp |
-|*videos/*| 250517-1.mp4 |
-|*private-post/images/*| 250517-1.webp |
-|*private-post/images/*| 250517-1\.md |
-
-你在该仓库discussions的留言会显示在我的 micro-twitter 里 :)
+无需数据库，直接对文件操作。所以**x2505.php**等需要手动创建。
 
 我的博客:[卡库伊2.0](https://blog.kkii.org)。

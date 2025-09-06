@@ -1,0 +1,539 @@
+/* 基础样式 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+            margin: 0 auto;
+            max-width: 600px;
+            border-left: 1px solid var(--md-outline);
+            border-right: 1px solid var(--md-outline);
+            /*background: url(/images/background.jpg) center/cover fixed no-repeat;*/
+        }
+          a {
+  -webkit-tap-highlight-color: transparent; /* 去掉 iOS/安卓点击高亮 */
+  -webkit-user-select: none; /* 禁止选中，体验更像按钮 */
+  -webkit-touch-callout: none; /* 禁用长按菜单（可选） */
+}
+        /* 颜色变量 */
+        :root {
+            --md-background: #ffffff;
+    --md-surface: #f8f9fa;
+    --md-surface-variant: #f1f3f4;
+    --md-on-background: #202124;
+    --md-on-surface: #3c4043;
+    --md-on-surface-variant: #5f6368;
+    --md-outline: #dadce0;
+    --md-blue: #1a73e8;
+    --md-green: #34a853;
+    --md-red: #ea4335;
+    --md-yellow: #fbbc04;
+    --md-purple: #9c27b0;
+    --md-pink: #e91e63;
+    --md-orange: #ff9800;
+    --md-cyan: #00bcd4;
+    --md-teal: #009688;
+    --md-indigo: #3f51b5;
+    --md-brown: #795548;
+    --md-gray: #9e9e9e;
+    --md-lime: #cddc39;
+    --md-deep-orange: #ff5722;
+    --md-light-blue: #03a9f4;
+    --md-light-green: #8bc34a;
+    --header-bg: rgba(255, 255, 255, 0.9);
+           
+        }
+        
+        /* 深色模式 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* 浅色模式 */
+            --md-background: #202124;
+        --md-surface: #2d2e30;
+        --md-surface-variant: #3c4043;
+        --md-on-background: #e8eaed;
+        --md-on-surface: #bdbfc2;
+        --md-on-surface-variant: #9aa0a6;
+        --md-outline: #5f6368;
+        --md-blue: #8ab4f8;
+        --md-green: #81c995;
+        --md-red: #f28b82;
+        --md-yellow: #fde293;
+        --md-purple: #bb86fc;
+        --md-pink: #ff8a9d;
+        --md-orange: #ffb74d;
+        --md-cyan: #4dd0e1;
+        --md-teal: #26a69a;
+        --md-indigo: #7986cb;
+        --md-brown: #a1887f;
+        --md-gray: #bdbdbd;
+        --md-lime: #dce775;
+        --md-deep-orange: #ff8a65;
+        --md-light-blue: #4fc3f7;
+        --md-light-green: #aed581;
+        --header-bg: rgba(32, 33, 36, 0.9);
+            }
+            h3 img{filter: invert(1);}
+          
+           }
+        /* 应用样式 */
+        body {
+            background-color: var(--md-background);
+            color: var(--md-on-background);
+        }
+        
+        .header, .footer {
+            padding: 16px;
+            border-bottom: 1px solid var(--md-outline);
+            position: sticky;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 999;
+            user-select: none;
+        }
+        .icon{ fill:var(--md-on-background); }
+        .header {
+            font-weight: 500;
+            font-size: 20px;
+            top: 0;
+            background-color: var(--header-bg);
+            outline:none;
+        }
+        
+        .footer {
+            font-size: 12px;
+            bottom: 0;
+            background-color: var(--header-bg);
+            color: var(--md-on-surface);
+        }
+        .footer a{
+            font-size : 12px;
+            margin-left: 1rem;
+        }
+        
+        .tweet {
+            padding: 16px;
+            border-bottom: 1px solid var(--md-outline);
+            display: flex;
+            background-color: var(--md-background);
+        }
+        
+        .tweet-content { flex: 1; line-height:2; overflow:hidden;}
+        
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .tweet-text, a {
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-size: 15px;
+            color: var(--md-on-background);
+                            
+        }
+        
+        a {
+            color: rgb(29, 155, 240);
+            text-decoration: none;
+        }
+        .header a{
+            font-size: 20px;
+            color: var(--md-on-background);
+            outline:none;
+            user-select: none;
+        }
+        
+        a:hover { text-decoration: underline; }
+
+        .bottom-banner {
+            background: url(/images/profile.jpg?v=2) no-repeat;
+            background-size: cover;
+            height: 33px;
+            background-position: bottom center;
+            padding-left: 1rem;
+            line-height: 33px;
+            font-size: 16px;
+            color: #dadce0;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+             filter: 
+    grayscale(100%)    /* 完全黑白 */
+    sepia(80%)         /* 添加褐色调 */
+    brightness(90%)    /* 微调亮度 */
+    contrast(90%);     /* 微调对比度 */
+
+  /* 兼容旧版 WebKit 浏览器 */
+  -webkit-filter: 
+    grayscale(100%)
+    sepia(80%)
+    brightness(90%)
+    contrast(90%);
+        }
+        ul,li{
+            line-height: 2;
+        }     
+        .month-grid {
+            display: inline-grid;
+            grid-template-columns: repeat(4, 40px); /* 4 columns */
+            grid-template-rows: repeat(4, 40px); /* 4 rows */
+            border-radius: 8px;
+            overflow: hidden;
+            border:var(--md-outline) 1px solid;
+        }
+        .month {
+height: var(--month-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--md-outline);
+  user-select: none;
+        }
+        .month a {
+  text-decoration: none;
+  color: rgb(29, 155, 240);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform: translateY(4px);
+}
+.cur span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.cur span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--md-orange);
+  border-radius: 50%;
+}
+
+
+        .month a:hover{
+            text-decoration: underline;
+        }
+                .bin span,.full-bin span{position: absolute;
+            display: inline-block; width: 9px; height: 9px; background-color:var(--md-orange); border-radius: 50%;}
+            .bin{
+                opacity: 0.5;
+                width: auto;
+                height: 128px;
+                position: relative;
+
+            }
+            .ball1{top:60px; left:calc(50% - 30px);}      
+            .b1{background-image: url(/images/dustbin1.svg); } 
+            .b2{background-image: url(/images/dustbin2.svg);} 
+            .b3{background-image: url(/images/dustbin3.svg);} 
+            .b4{background-image: url(/images/dustbin4.svg);} 
+            .b5{background-image: url(/images/dustbin5.svg);} 
+            .b6{background-image: url(/images/dustbin6.svg);} 
+            .b7{background-image: url(/images/dustbin7.svg);} 
+            .b8{background-image: url(/images/dustbin8.svg);} 
+            .b9{background-image: url(/images/dustbin9.svg);} 
+            .b10{background-image: url(/images/dustbin10.svg);} 
+            .b11{background-image: url(/images/dustbin11.svg);} 
+            .b12{background-image: url(/images/dustbin12.svg);} 
+            .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9,.b10,.b11,.b12{
+                background-size: 90% 90%; /* 缩小背景图到容器的 90% */
+                background-position: center center;
+                background-repeat: no-repeat;
+  width: 100%;               /* 自适应容器宽度 */
+  aspect-ratio: 150 / 150;   /* 保持原图宽高比 */
+            }
+            .year-label {
+  grid-column: span 4;
+  position: relative;
+  text-align: center;
+  letter-spacing: 0.3em;
+  background: var(--md-surface);
+  color:var(--md-on-surface);
+  font-weight: bolder;
+}
+.wrapper {
+display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.right {
+  margin-left:0px; /* 左边固定间距 */
+  white-space: nowrap; /* 可选，防止右侧换行 */
+  flex: 1;
+  height: 128px;
+  position:relative;
+}
+.bubble {
+    background: #8bc34a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: relative; /* 为箭头定位 */
+    /* 新增：让内容水平居中对齐 */
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px; /* 控制字体和图片大小 */
+    color: #2d2e30;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+    transform-origin: center center;
+  transition: transform 0.1s ease; /* 缩放过渡 */
+}
+
+.bubble > span {
+    display: flex;
+    align-items: center;
+}
+
+.bubble > span:not(:last-child) {
+    margin-right: 20px;
+}
+
+.bubble > span:first-child {
+    margin-right: 5px;
+}
+
+.bubble img {
+    height: 1.3em;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.bubble::before {
+    content: "";
+    position: absolute;
+    top: -6px; /* 再往上插 */
+    left: 10px;
+    border-width: 0 5px 6px 5px; /* 高度也加一点 */
+    border-style: solid;
+    border-color: transparent transparent #8bc34a transparent;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  transition: background-color 0.5s ease;
+}
+.bubble-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.bfin img{
+    height: 100%;
+    width:100%;
+   object-fit: cover; /* 保持图片比例并覆盖容器 */
+   display: block; /* 去除图片底部的空白间隙 */
+       }
+       .bin.bfin{
+         opacity: 1 !important;
+        /* 确保图片显示为圆形 */
+   border-radius: 50%;
+   /* 隐藏超出圆形区域的部分 */
+   overflow: hidden;
+   position:absolute;
+   /* 设置投影效果 - 向右下方偏移5px，模糊10px，透明度30%的黑色阴影 */
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+   
+   /* 可选：添加过渡效果使阴影在交互时更平滑 */
+   transition: box-shadow 0.3s ease;
+   width:128px !important;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+       }
+       li{
+            list-style-type: none;
+            display: inline-block;
+            margin: 0  5px ;
+            padding: 0;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        h3{
+            display: flex;
+            align-items: center;
+            line-height: 24px;
+    gap: 10px;
+        }
+        li a:link,li a:active,li a:visited{
+            padding: 5px 8px;
+            background-color: var(--md-outline);
+            border-radius: 8px;
+            user-select: none;
+            display: inline-block !important;
+            border:2px solid var(--md-outline);
+            color: var(--md-on-background);
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+            
+        }
+         li a:hover{
+             text-decoration: none;
+              border:2px solid var(--md-orange);
+             
+         }
+           /* QQ2008窗口样式 */
+.qq-window {
+    width: auto;
+    max-width: 500px;
+    border: 1px solid #111;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+            min-width: 200px;
+            min-height: 200px;
+        }
+/* 标题栏样式 */
+.qq-titlebar {
+    height: 36px;
+    background: linear-gradient(to top, rgba(150,147,156,0.5), rgba(210,211,216,0.5));
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    user-select: none;
+    position: relative;
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px 8px 0px 0px;
+}     
+      
+.qq-titlebar-text {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left:0.3em;
+    text-transform: uppercase;
+}
+
+.qq-titlebar-buttons {
+    margin-left: auto;
+    display: flex;
+    height:36px;
+}
+
+.qq-titlebar-button {
+    width: 46px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    text-decoration: none;
+    margin-left: 1px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.qq-titlebar-button.close:hover{
+     background-color: #c73c3c;
+     text-decoration: none;
+}
+
+.qq-titlebar-button.close {
+    background-color: #cd5959;
+    color:#fff  !important;
+    border-radius: 0px 8px 0px 0px;
+}
+/* 内容区域 */
+.qq-content {
+    padding: 20px;
+    transition: background 0.3s;
+                background-color: #e3f5f9;
+}
+.qq-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--qq-text);
+    transition: color 0.3s;
+}
+.qq-icon{
+    display: inline-block;
+}
+.qq-icon img{
+    width:18px;
+    transform: translateY(2px);
+}
+.qq-button {
+    background: linear-gradient(to top, #b6d8f1, #fbffff);
+/* 兼容旧浏览器的前缀 */
+background: -webkit-linear-gradient(bottom, #b6d8f1, #fbffff);
+background: -moz-linear-gradient(bottom, #b6d8f1, #fbffff);
+background: -o-linear-gradient(bottom, #b6d8f1, #fbffff);
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius:8px;
+    border:#6690a9 1px solid;
+    color:#2d404e;
+  }
+.qq-button svg{
+    height:23px;
+    vertical-align: middle;
+}
+.qq-button:hover {
+    box-shadow: inset 0 0 0 2px orange; /* 模拟内边框 */
+}
+
+.qq-button-container {
+    margin-top: 20px;
+    text-align:right;
+}
+
+/* 底部信息 */
+.qq-footer {
+    padding: 8px 15px;
+    background: linear-gradient(to top, rgba(150,147,156,0.5), rgba(210,211,216,0.5));
+    font-size: 12px;
+     text-align: right;
+    transition: all 0.3s;
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0px 0px 8px 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .qq-window {
+        width: 96%;
+    }
+    
+    .qq-content {
+        padding: 15px;
+    }
+}
+.label-group{
+    border:1px solid #94b8ce;
+    padding:1rem;
+    background-color:#f1faff;
+}
+.qq-titlebar-button,
+.qq-titlebar-button:active,  /* 修正拼写错误 */
+.qq-titlebar-button:visited{
+font-family: initial !important;
+}
