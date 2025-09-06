@@ -16,7 +16,7 @@ micro-twitter
 ### Notes
 Verification page: */auth/verify.php*
 
-Publishing page: */auth/post.php*
+Publishing page: */post.php*
 
 Visitor format: *http://yourdomain/?key=allowed_key*
 
@@ -40,7 +40,7 @@ My blog: [卡库伊2.0](https://blog.kkii.org)
 ### 提示
 验证页：*/auth/verify.php*
 
-发布页：*/auth/post.php*
+发布页：*/post.php*
 
 访客格式：*http://yourdomain/?key=allowed_key*
 
