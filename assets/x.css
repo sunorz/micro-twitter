@@ -975,3 +975,8 @@ html::before {
 .fiv-cla{ font-size: 2em;margin-left:1em;}
             .fiv-cla:first-of-type{margin-left:0;}
             .fiv-cla:hover{text-decoration: none;}
+            .confirm:hover{
+                box-shadow: none;
+                background:#ea4335;
+     color:#fff;
+            }

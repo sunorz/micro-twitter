@@ -318,7 +318,6 @@ body.minimized-layout {
 .selected{
     color:var(--qq-text);
 }
-.qq-button-container button,
 form:nth-of-type(2) {
   visibility: hidden;
 }
@@ -332,3 +331,44 @@ color: var(--qq-text);
 opacity:0;
 cursor:default;
 }  
+ #result{
+            width:100%;text-align:center;display:flex;justify-content:center;gap:10px;line-height:30px;color:var(--qq-text);
+        }
+        .qq-button:disabled {
+    background: #ccc;  /* 灰色背景 */
+    color: #999;  /* 灰色文字 */
+    cursor: not-allowed;  /* 禁用鼠标指针 */
+    opacity: 0.5;  /* 使按钮变得半透明 */
+}
+ #logoutBtn:hover{
+     box-shadow:none;
+     background:#ea4335 !important;
+     color:#fff;
+ }
+#logoutBtn svg{
+  fill: #2d404e;               /* 默认填充色 */
+  transition: fill .2s;     /* 平滑过渡 */
+}
+#logoutBtn:hover svg{
+  fill: #fff; 
+}
+ .qq-button:disabled:hover {
+    box-shadow : none;
+}
+.qq-avatar-container{
+    position:relative;
+}
+#status{
+  position: absolute;
+  display:inline-block;
+  top:calc(50% + 12px);
+  left:calc(50% + 18px);
+  z-index:999;
+  width:14px;  
+}
+#status img{width:100%;}
+.inline{
+    display:inline-block !important;
+    margin-right:0.5rem;
+    line-height:27.33px;
+}

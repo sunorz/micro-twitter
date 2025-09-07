@@ -891,7 +891,7 @@ document.addEventListener('click', async function (e) {
             color: var(--md-on-background);
             font-family: 'Noto Serif SC', 'Georgia', 'Times New Roman', serif;
         ">
-            <div style="font-size: 12px;padding:8px;line-height:2;text-indent:2em;">${originalText}</div>
+            <div id="original-text" style="font-size: 12px;padding:8px;line-height:2;text-indent:2em;">${originalText}</div>
             <div style="font-size: 12px;padding:8px;line-height:2;">${translatedText}</div>
            <div style="
     font-size: 5%; /* 父容器宽度的百分比 */
@@ -910,6 +910,18 @@ document.addEventListener('click', async function (e) {
 </div>
         </div>
     `;
+const originalDiv = capture.querySelector('#original-text');
+if (originalDiv) {
+  const text = originalDiv.innerText.trim();
+  const style = window.getComputedStyle(originalDiv);
+  const fontSize = parseFloat(style.fontSize);       // 字号
+  const containerWidth = originalDiv.clientWidth;    // 容器宽度
+  const maxCharsPerLine = Math.floor(containerWidth / fontSize);
+
+  if (text.length <= maxCharsPerLine) {
+    originalDiv.style.textIndent = '0';
+  }
+}
 
     // 生成图片
     const canvas = await html2canvas(capture.querySelector('div'));
