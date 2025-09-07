@@ -274,32 +274,9 @@ ob_clean();
     <meta name="color-scheme" content="light dark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take out the trash</title>
-    <link rel="stylesheet" href="assets/post.min.css?v=2.3.29">
+    <link rel="stylesheet" href="assets/post.min.css?v=2.3.30">
     <style>
-        #result{
-            width:100%;text-align:center;display:flex;justify-content:center;gap:10px;line-height:30px;color:var(--qq-text);
-        }
-        .qq-button:disabled {
-    background: #ccc;  /* 灰色背景 */
-    color: #999;  /* 灰色文字 */
-    cursor: not-allowed;  /* 禁用鼠标指针 */
-    opacity: 0.5;  /* 使按钮变得半透明 */
-}
- .qq-button:disabled:hover {
-    box-shadow : none;
-}
-.qq-avatar-container{
-    position:relative;
-}
-#status{
-  position: absolute;
-  display:inline-block;
-  top:calc(50% + 12px);
-  left:calc(50% + 18px);
-  z-index:999;
-  width:14px;  
-}
-#status img{width:100%;}
+       
 .copy-target {
     word-break: break-all;
     display: inline-block;
@@ -324,11 +301,7 @@ ob_clean();
     ?>
 }
 
-.inline{
-    display:inline-block !important;
-    margin-right:0.5rem;
-    line-height:27.33px;
-}
+
     </style>
 </head>
 <body class="normal-layout">
@@ -410,14 +383,15 @@ ob_clean();
                     <textarea id="text_content" name="text_content" class="qq-textarea" required></textarea>                    
                 </div>
                 </div>
-                <div class="qq-button-container">
-                 <button type="submit" class="qq-button"><svg t="1746848087309" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3603" width="32" height="32"><path d="M657.3 901H425.4C349.1 901 287 839 287 762.6v-427c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v427.1c0 37.5 30.5 68 68 68h231.9c37.5 0 68-30.5 68-68V335.6c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v427.1c0 76.3-62.1 138.3-138.4 138.3z m0 0" p-id="3604" fill="#2d404e"></path><path d="M625.3 359.1c-19.4 0-35.2-15.8-35.2-35.2v-49.1c0-10.6-8.6-19.2-19.2-19.2h-59.1c-10.6 0-19.2 8.6-19.2 19.2v49.1c0 19.4-15.8 35.2-35.2 35.2-19.4 0-35.2-15.8-35.2-35.2v-49.1c0-49.4 40.2-89.6 89.6-89.6h59.1c49.4 0 89.6 40.2 89.6 89.6v49.1c0 19.5-15.7 35.2-35.2 35.2z m0 0" p-id="3605" fill="#2d404e"></path><path d="M827.6 365.3H255.1c-19.4 0-35.2-15.8-35.2-35.2 0-19.4 15.8-35.2 35.2-35.2h572.5c19.4 0 35.2 15.8 35.2 35.2 0 19.4-15.8 35.2-35.2 35.2zM470 748.1c-19.4 0-35.2-15.8-35.2-35.2V455.8c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v257.1c0 19.4-15.8 35.2-35.2 35.2z m142.7 0c-19.4 0-35.2-15.8-35.2-35.2V455.8c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v257.1c0 19.4-15.8 35.2-35.2 35.2z m0 0" p-id="3606" fill="#2d404e"></path></svg><span style="
+                <div class="qq-button-container" style="display: flex;justify-content: space-between;">
+                <button id="logoutBtn" class="qq-button" style="background:#fbbc04;"><svg t="1756100496234" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5041"  width="18" height="18"><path d="M570.107 47.258H453.903V572.78h116.199V47.258z m208.86 86.886l-81.316 80.794c92.872 63.457 162.427 173.143 162.427 300.052 0 190.48-156.544 346.286-348.175 346.286-191.427 0-348.176-155.807-348.176-346.286 0-126.91 69.76-236.595 168.31-294.277l-86.994-86.569C129.055 220.713 47.733 359.188 47.733 514.99c0 254.04 209.076 461.752 464.165 461.752 255.298 0 464.368-207.708 464.368-461.752 0.005-155.802-81.31-294.277-197.299-380.846z" p-id="5042"></path></svg><span style="
+                   transform:translateY(2px);display:inline-block;margin-left:0.7rem;">Logout</span></button>
+                 <button id="postBtn" type="submit" class="qq-button"><svg t="1746848087309" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3603" width="32" height="32"><path d="M657.3 901H425.4C349.1 901 287 839 287 762.6v-427c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v427.1c0 37.5 30.5 68 68 68h231.9c37.5 0 68-30.5 68-68V335.6c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v427.1c0 76.3-62.1 138.3-138.4 138.3z m0 0" p-id="3604" fill="#2d404e"></path><path d="M625.3 359.1c-19.4 0-35.2-15.8-35.2-35.2v-49.1c0-10.6-8.6-19.2-19.2-19.2h-59.1c-10.6 0-19.2 8.6-19.2 19.2v49.1c0 19.4-15.8 35.2-35.2 35.2-19.4 0-35.2-15.8-35.2-35.2v-49.1c0-49.4 40.2-89.6 89.6-89.6h59.1c49.4 0 89.6 40.2 89.6 89.6v49.1c0 19.5-15.7 35.2-35.2 35.2z m0 0" p-id="3605" fill="#2d404e"></path><path d="M827.6 365.3H255.1c-19.4 0-35.2-15.8-35.2-35.2 0-19.4 15.8-35.2 35.2-35.2h572.5c19.4 0 35.2 15.8 35.2 35.2 0 19.4-15.8 35.2-35.2 35.2zM470 748.1c-19.4 0-35.2-15.8-35.2-35.2V455.8c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v257.1c0 19.4-15.8 35.2-35.2 35.2z m142.7 0c-19.4 0-35.2-15.8-35.2-35.2V455.8c0-19.4 15.8-35.2 35.2-35.2 19.4 0 35.2 15.8 35.2 35.2v257.1c0 19.4-15.8 35.2-35.2 35.2z m0 0" p-id="3606" fill="#2d404e"></path></svg><span style="
                    transform:translateY(2px);display:inline-block;">Take out</span></button>
                 </div>                
             </form>
             <form method="post" style="position: absolute;left: 20px;">
-                 <button type="submit" class="qq-button" name="clear_session" style="background:#fbbc04;"><svg t="1756100496234" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5041"  width="18" height="18"><path d="M570.107 47.258H453.903V572.78h116.199V47.258z m208.86 86.886l-81.316 80.794c92.872 63.457 162.427 173.143 162.427 300.052 0 190.48-156.544 346.286-348.175 346.286-191.427 0-348.176-155.807-348.176-346.286 0-126.91 69.76-236.595 168.31-294.277l-86.994-86.569C129.055 220.713 47.733 359.188 47.733 514.99c0 254.04 209.076 461.752 464.165 461.752 255.298 0 464.368-207.708 464.368-461.752 0.005-155.802-81.31-294.277-197.299-380.846z" p-id="5042" fill="#2d404e"></path></svg><span style="
-                   transform:translateY(2px);display:inline-block;margin-left:0.7rem;">Logout</span></button>
+                 <button id="logoutHidden" type="submit" name="clear_session"></button>
               
       </form>
         </div>
@@ -609,37 +583,22 @@ document.querySelector('.qq-titlebar-button.close')?.addEventListener('click', f
 
   // 让列表项可聚焦
   options.forEach(option => option.setAttribute('tabindex', '-1'));
-function alignButtons() {
-  const btn1 = document.querySelector('.qq-button-container button'); // 按钮1
-  const form2 = document.querySelectorAll('form')[1]; // 第二个form
-  if (!btn1 || !form2) return;
-
-  const rect1 = btn1.getBoundingClientRect();
-  const parentRect = btn1.offsetParent.getBoundingClientRect();
-  const relativeTop = rect1.top - parentRect.top;
-
-  form2.style.position = 'absolute';
-  form2.style.top = relativeTop + 'px';
-
-  // 定位完成后显示
-  btn1.style.visibility = 'visible';
-  form2.style.visibility = 'visible';
-}
-
-window.addEventListener('load', alignButtons);
-window.addEventListener('resize', alignButtons);
-const textarea = document.querySelector('textarea');
-
-const ro = new ResizeObserver(() => {
-  alignButtons();
-});
-
-ro.observe(textarea);
 
 
 // 获取表单和结果容器元素
 const form = document.querySelector('form[method="post"]:not([name="clear_session"])');
 const resultDiv = document.getElementById('result');
+const logoutBtn = document.getElementById('logoutBtn');
+const logoutHidden = document.getElementById('logoutHidden');
+
+if (logoutBtn && logoutHidden) {
+  logoutBtn.addEventListener('click', function (e) {
+    e.preventDefault();        // 阻止表单提交和校验
+    e.stopPropagation();       // 阻止冒泡（保险）
+    logoutHidden.click();      // 自动触发隐藏按钮点击
+  });
+}
+
 
 if (form && resultDiv) {
   form.addEventListener('submit', async function(e) {
@@ -663,7 +622,7 @@ if (form && resultDiv) {
         document.querySelector('textarea').value = '';
         document.querySelector('textarea').focus();
 
-        const button = document.querySelector('.qq-button');
+        const button = document.getElementById('postBtn');
         setTimeout(() => {
           resultDiv.style.opacity = '0';
           }, 5000);
