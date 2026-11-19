@@ -19,7 +19,6 @@ A fully controllable private status feed.
 - Frontend visibility modes: Public, temporary links only, strictly private
 - Image layout: Single image, multiple images, thumbnails
 - Video support: Local `mp4`, remote `m3u8`
-- Sync translation to `X.com`
 - Original and translation
 - Media file management: Upload, preview, delete, rename, play
 - Search
